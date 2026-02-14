@@ -107,7 +107,32 @@
  @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:300; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-300.woff2') format('woff2'); }
  @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-regular.woff2') format('woff2'); }
  @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:500; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-500.woff2') format('woff2'); }
- </style>
+ 
+/* === THESIS CARD DEEP-DIVE ACCORDION === */
+.thesis-card { cursor:pointer; position:relative; }
+.thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
+.thesis-card-header-left { flex:1; }
+.thesis-card-toggle { font-size:0.9rem; color:var(--accent-warm); transition:transform 0.3s; flex-shrink:0; width:1.8rem; height:1.8rem; text-align:center; line-height:1.8rem; background:rgba(255,255,255,0.08); border-radius:50%; font-weight:700; margin-top:0.2rem; }
+.thesis-card.open .thesis-card-toggle { transform:rotate(45deg); background:var(--accent-warm); color:#1a1a2e; }
+.thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
+.thesis-card:hover .thesis-card-hint { opacity:1; }
+.thesis-card.open .thesis-card-hint { display:none; }
+.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
+.thesis-card.open .thesis-deepdive { max-height:12000px; }
+.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
+.thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
+.thesis-deepdive-inner h5:first-child { margin-top:0; }
+.thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
+.thesis-deepdive-inner strong { color:rgba(255,255,255,0.85); }
+.thesis-deepdive-inner em { color:var(--accent-warm); font-style:normal; font-weight:600; }
+.thesis-quote { border-left:2px solid var(--accent-warm); padding:0.4rem 0.8rem; margin:0.5rem 0; background:rgba(255,255,255,0.03); border-radius:0 4px 4px 0; }
+.thesis-quote p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; font-style:italic; }
+.thesis-quote .quote-src { font-style:normal; font-size:0.68rem !important; color:var(--accent-warm) !important; display:block; margin-top:0.2rem; }
+.thesis-outlook { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:0.6rem 0.8rem; margin:0.6rem 0 0.3rem 0; }
+.thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
+.thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
+
+</style>
  <style>
  :root {
  --bg: #FAFAF7; --bg-warm: #F5F3EE; --bg-card: #FFFFFF; --bg-dark: #1a1a2e; --bg-darker: #12121f;
@@ -406,7 +431,32 @@
  .footer-legal { display:flex; gap:1.5rem; margin-top:0.5rem; }
  .footer-legal a { font-size:0.72rem; color:var(--text-muted); text-decoration:none; transition:color 0.3s; cursor:pointer; }
  .footer-legal a:hover { color:var(--accent); text-decoration:underline; }
- </style>
+ 
+/* === THESIS CARD DEEP-DIVE ACCORDION === */
+.thesis-card { cursor:pointer; position:relative; }
+.thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
+.thesis-card-header-left { flex:1; }
+.thesis-card-toggle { font-size:0.9rem; color:var(--accent-warm); transition:transform 0.3s; flex-shrink:0; width:1.8rem; height:1.8rem; text-align:center; line-height:1.8rem; background:rgba(255,255,255,0.08); border-radius:50%; font-weight:700; margin-top:0.2rem; }
+.thesis-card.open .thesis-card-toggle { transform:rotate(45deg); background:var(--accent-warm); color:#1a1a2e; }
+.thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
+.thesis-card:hover .thesis-card-hint { opacity:1; }
+.thesis-card.open .thesis-card-hint { display:none; }
+.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
+.thesis-card.open .thesis-deepdive { max-height:12000px; }
+.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
+.thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
+.thesis-deepdive-inner h5:first-child { margin-top:0; }
+.thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
+.thesis-deepdive-inner strong { color:rgba(255,255,255,0.85); }
+.thesis-deepdive-inner em { color:var(--accent-warm); font-style:normal; font-weight:600; }
+.thesis-quote { border-left:2px solid var(--accent-warm); padding:0.4rem 0.8rem; margin:0.5rem 0; background:rgba(255,255,255,0.03); border-radius:0 4px 4px 0; }
+.thesis-quote p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; font-style:italic; }
+.thesis-quote .quote-src { font-style:normal; font-size:0.68rem !important; color:var(--accent-warm) !important; display:block; margin-top:0.2rem; }
+.thesis-outlook { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:0.6rem 0.8rem; margin:0.6rem 0 0.3rem 0; }
+.thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
+.thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
+
+</style>
 </head>
 <body>
 
@@ -490,25 +540,175 @@
  </div>
  <div class="thesis-cards">
  <div class="thesis-card">
- <h4>Massive Automation of Knowledge Work</h4>
- <p>McKinsey estimates that 22% of lawyer tasks and 35% of legal assistant work can be automated with current AI. Goldman Sachs puts the share of automatable legal tasks at 44%.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>Massive Automation of Knowledge Work</h4>
+   <p>McKinsey estimates that 22% of lawyer activities and 35% of legal assistant work are automatable with current AI. Goldman Sachs puts automatable legal tasks at 44%.</p>
+   <div class="thesis-card-hint">▸ Read deep dive</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>The Data: Where Does Automation Really Stand?</h5>
+   <p>McKinsey's report "Agents, Robots, and Us" (November 2025) sharpened the debate: <strong>57% of all U.S. work hours</strong> are potentially automatable with today's technology — nearly double the 30% estimate from 2023. For the legal sector, the numbers are particularly striking. Legal and Administrative Services rank among the occupations with the <strong>highest automation potential</strong> — together representing 40% of all U.S. wages in highly automatable roles.</p>
+   <p>Goldman Sachs' study "The Potentially Large Effects of AI on Economic Growth" (2023) remains a key reference: <strong>44% of all legal tasks</strong> are automatable by generative AI — the highest rate among all knowledge professions, ahead of financial services (35%) and management (32%). The OECD confirms this trend: Legal professions rank globally among the top 5 most AI-exposed occupational groups.</p>
+
+   <h5>What Gets Automated — and What Doesn't</h5>
+   <p>Automation doesn't blanket "legal work" — it targets specific task types: <strong>document review and classification</strong>, <strong>regulatory research</strong>, <strong>standard contract drafting</strong>, <strong>compliance monitoring</strong>, and <strong>reporting</strong>. What <strong>remains non-automatable</strong>: strategic legal counsel, negotiation, judgment calls under uncertainty, novel legal questions, and ethical balancing of conflicts of interest. McKinsey emphasizes: Over <strong>70% of skills</strong> demanded by employers today will remain relevant in an AI-dominated workplace — though applied differently.</p>
+
+   <div class="thesis-quote">
+    <p>"Everyone is experimenting, but almost nobody is transforming. Only 6% redesign workflows and win — the other 94% become footnotes."</p>
+    <span class="quote-src">— LawFuel, Analysis of McKinsey AI Report 2025</span>
+   </div>
+
+   <h5>The Scaling Problem: Adoption Without Transformation</h5>
+   <p>McKinsey's Global AI Survey 2025 (~2,000 executives): <strong>88% of companies use AI</strong>, but only <strong>39% report measurable EBIT impact</strong>. For most, the effect is below 5%. Only <strong>6% of companies</strong> — McKinsey's "high performers" — fundamentally redesign their workflows. The rest apply AI to decades-old processes.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
+    <p>Companies must act <strong>now</strong>: Conduct a systematic <strong>task analysis</strong> — which legal tasks are automatable, which require human judgment? Launch <strong>pilot projects with measurable KPIs</strong>, not enterprise-wide visions. Prioritize <strong>upskilling</strong> — McKinsey shows demand for "AI fluency" in job postings has <strong>grown sevenfold</strong> in two years. Organizations without AI-competent legal teams in 12 months won't be able to recruit them.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>From Buy to Build: Companies Becoming Software Developers</h4>
- <p>Low-code platforms, foundation models and agentic AI enable legal and compliance teams to build their own applications — without traditional IT projects, faster and more precisely tailored than any standard solution.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>From Buy to Build: Companies Becoming Software Developers</h4>
+   <p>Low-code platforms, foundation models, and agentic AI enable legal and compliance teams to build custom applications — without traditional IT projects, faster and more precisely than any off-the-shelf solution.</p>
+   <div class="thesis-card-hint">▸ Read deep dive</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>Why the Barrier to Entry Has Fallen</h5>
+   <p>Foundation Models (OpenAI's GPT-4o, Anthropic's Claude, Meta's Llama, Mistral's Mixtral) provide expert-level language understanding via APIs — for pennies per query. Frameworks like <strong>LangChain</strong> and <strong>LlamaIndex</strong> orchestrate complex RAG workflows incorporating proprietary documents. Platforms like <strong>n8n</strong>, <strong>Make</strong>, and <strong>Microsoft Power Platform</strong> enable non-programmers to configure AI agents visually.</p>
+   <p>BCG's "Build for the Future" report (2025): Only <strong>5% of companies</strong> are "Future-Built" generating scaled AI value. <strong>60% report minimal results</strong> — often because they rely on generic solutions that don't address their specific governance requirements.</p>
+
+   <h5>Practical Examples of Successful Internal Development</h5>
+   <p><strong>McKinsey "Lilli":</strong> Used by 75% of 43,000 employees monthly, converting 50,000+ consulting hours into higher-value analysis. <strong>PwC "ChatPwC":</strong> Generates compliance reports for 75,000+ trained employees. <strong>Klarna:</strong> The Swedish fintech replaced capabilities previously handled by Salesforce, Workday, and external firms — CEO Sebastian Siemiatkowski reported AI agents handling work equivalent to 700 customer service employees.</p>
+
+   <div class="thesis-quote">
+    <p>"Organizations with defined AI strategies are 2x more likely to experience revenue growth and 3.5x more likely to realize critical AI benefits."</p>
+    <span class="quote-src">— Steve Hasker, CEO Thomson Reuters, 2026</span>
+   </div>
+
+   <h5>Data Sovereignty as Strategic Driver</h5>
+   <p>For European companies, <strong>data sovereignty</strong> is the central build argument. GDPR, the EU AI Act, and sector-specific regulations require control over data flows. Gartner projects: By 2027, <strong>35% of countries</strong> will be locked into region-specific AI platforms. European companies building internal competence now gain strategic independence.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
+    <p>Pursue a <strong>hybrid build-buy strategy</strong>: Cover standardized tasks with established tools, but build internal competence for <strong>company-specific compliance applications</strong>. First step: A <strong>concrete pilot project in 4–6 weeks</strong> — e.g., a RAG-based policy chatbot. Deloitte's State of AI Report (2026): Only <strong>1 in 5 companies</strong> has a mature AI governance model. Building capability now creates <strong>sustainable competitive advantage</strong>.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>Agentic AI: From Assistants to Autonomous Agents</h4>
- <p>Gartner predicts that by 2026, 40% of all enterprise applications will integrate AI agents (currently: under 5%). In the legal sector, agents will independently research, review and prepare compliance decisions.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>Agentic AI: From Assistants to Autonomous Agents</h4>
+   <p>Gartner predicts that by 2026, 40% of all enterprise applications will integrate AI agents (today: under 5%). In legal, agents will independently research, review, and prepare compliance decisions.</p>
+   <div class="thesis-card-hint">▸ Read deep dive</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>What Distinguishes Agentic AI from Current Tools</h5>
+   <p>Current AI tools work <strong>reactively</strong>: humans ask, AI responds. Agentic AI marks a paradigm shift — systems that <strong>autonomously plan, decide, act, and learn from results</strong>. Gartner's Anushree Verma describes five stages: From AI assistants (2025) through task-specific agents (2026) and collaborative multi-agent systems (2027–2028) to the "new normal" (2029), where 50%+ of knowledge workers create and govern agents.</p>
+   <p>McKinsey's 2025 Global AI Survey confirms: <strong>62% of companies</strong> are already testing AI agents, with adoption fastest in IT, knowledge management, and customer service.</p>
+
+   <h5>Agentic AI in Legal: Concrete Developments</h5>
+   <p><strong>Thomson Reuters CoCounsel</strong> launches agent-based legal workflows in early 2026 with autonomous document review and "Deep Research." <strong>LexisNexis Protégé</strong> deploys four specialized agents collaborating on complex workflows. <strong>Harvey AI</strong>, used by Allen & Overy and PwC Legal, develops specialized legal agents for contract drafting, regulatory analysis, and litigation support. Gartner predicts <strong>zero-touch contracting</strong> for low-risk agreements and 95% accuracy in surgical redlining for 2026.</p>
+
+   <div class="thesis-quote">
+    <p>"AI agents will evolve rapidly, progressing from task-specific agents to agentic ecosystems — transforming enterprise applications into platforms enabling seamless autonomous collaboration."</p>
+    <span class="quote-src">— Anushree Verma, Sr Director Analyst, Gartner (August 2025)</span>
+   </div>
+
+   <h5>The Governance Challenge: Who Controls the Agents?</h5>
+   <p>Gartner warns: Over <strong>40% of agentic AI projects</strong> will be canceled by end of 2027 due to escalating costs or unclear business value. Additionally, over <strong>2,000 "death by AI" legal claims</strong> are expected by end of 2026. The EU AI Act requires human oversight (Art. 14) for high-risk systems — including agent-based ones.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
+    <p>Prepare <strong>now</strong>: Build an <strong>Agent Governance Framework</strong> — which decisions can agents make autonomously, where is human-in-the-loop mandatory? Implement <strong>audit trails</strong> for every agent action. Build <strong>agent management competence</strong> internally: Gartner expects 50%+ of knowledge workers to create agents "on demand" by 2029. Legal departments that don't build this capability become the <strong>bottleneck of the enterprise AI strategy</strong>.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>EU AI Act: Compliance Becomes Mandatory</h4>
- <p>From August 2026, the core obligations of the EU AI Act take effect. High-risk AI systems — including in the legal sector — require risk management, technical documentation and human oversight. Penalties up to €35M or 7% of global revenue.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>EU AI Act: Compliance Becomes Mandatory</h4>
+   <p>From August 2026, the core obligations of the EU AI Act take effect. High-risk AI systems — including in the legal sector — require risk management, technical documentation, and human oversight. Penalties up to €35M or 7% of global revenue.</p>
+   <div class="thesis-card-hint">▸ Read deep dive</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>The Regulatory Timeline</h5>
+   <p>The EU AI Act (Regulation 2024/1689) is enforced in <strong>three stages</strong>: Since <strong>February 2025</strong>, prohibitions on unacceptable AI practices apply. From <strong>August 2025</strong>, transparency obligations for general-purpose AI (GPAI) take effect. From <strong>August 2026</strong>, core obligations for <strong>high-risk systems</strong> become enforceable — the most relevant stage for legal departments.</p>
+   <p>AI systems in <strong>administration of justice and democratic processes</strong> (Annex III, Point 8) are classified as high-risk. Obligations include: risk management (Art. 9), data governance (Art. 10), technical documentation (Art. 11), logging (Art. 12), transparency (Art. 13), human oversight (Art. 14), and accuracy/robustness/cybersecurity requirements (Art. 15).</p>
+
+   <h5>International Regulatory Pressure</h5>
+   <p>The <strong>Colorado AI Act</strong> takes effect June 2026. The <strong>Illinois AI in Employment Act</strong> has been in effect since January 2026. <strong>ABA Formal Opinion 512</strong> (July 2024) requires lawyers to have "reasonable understanding" of AI tools. Gartner projects: By 2026, <strong>80% of organizations</strong> will formalize AI policies addressing ethical, brand, and PII risks.</p>
+
+   <div class="thesis-quote">
+    <p>"2026 marks the emergence of a new divide among organisations: those that adopt an AI strategy and those that do not."</p>
+    <span class="quote-src">— Steve Hasker, CEO Thomson Reuters</span>
+   </div>
+
+   <h5>Conformity Assessment: Practical Steps</h5>
+   <p>Compliance with the EU AI Act requires: <strong>AI inventory</strong>, <strong>risk analysis per system</strong>, <strong>technical documentation</strong>, <strong>human oversight mechanisms</strong>, and <strong>audit trails</strong>. ISO/IEC 42001:2023 (AI Management Systems) provides a compatible international framework. Organizations implementing this standard simultaneously build the foundation for EU AI Act compliance.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
+    <p>Less than <strong>6 months</strong> until August 2026. Organizations serving the EU market must <strong>act now</strong>: create AI inventories, assign risk categories, build governance structures. Penalties — up to <strong>€35M or 7% of global revenue</strong> — make inaction an existential risk. Yet compliance is a <strong>strategic enabler</strong>: Organizations with mature AI governance can scale faster. Thomson Reuters shows: Organizations with defined AI strategies are <strong>2x more likely</strong> to achieve revenue growth and <strong>3.5x more likely</strong> to realize critical AI benefits.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>The In-House Power Shift</h4>
- <p>52% of in-house counsel actively use GenAI (ACC/Everlaw, 2025) — double compared to the previous year. 64% use AI specifically to reduce dependence on external law firms.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>The In-House Power Shift</h4>
+   <p>52% of in-house counsel actively use GenAI (ACC/Everlaw, 2025) — doubling from the previous year. 64% use AI specifically to reduce dependence on outside counsel.</p>
+   <div class="thesis-card-hint">▸ Read deep dive</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>The Numbers Behind the Power Shift</h5>
+   <p>The ACC/Everlaw GenAI Survey 2025 documents one of the fastest adoption waves in legal market history: <strong>GenAI usage in legal departments more than doubled</strong> in one year — from 23% to 52%. Notably, <strong>64% of in-house teams</strong> expect to <strong>depend less on outside counsel</strong> through internally built AI capabilities. Routine work traditionally outsourced to law firms is increasingly handled internally.</p>
+
+   <h5>What Drives the In-House Power Shift</h5>
+   <p>Three factors converge: <strong>Availability of powerful tools</strong> (CoCounsel, Harvey AI, Luminance), <strong>cost pressure</strong> (internal AI review costs a fraction of external hourly rates), and <strong>data control</strong> (internal solutions avoid sensitive data transfers to third parties).</p>
+   <p>Forrester tempers the hype: Their 2026 predictions declare the "AI hype period over," projecting enterprises will defer <strong>25% of planned AI spending</strong> into 2027 due to ROI concerns. Only <strong>15% of AI decision-makers</strong> reported EBITDA improvements in the past 12 months.</p>
+
+   <div class="thesis-quote">
+    <p>"The gap between inflated vendor promises and value delivered is widening, forcing market correction."</p>
+    <span class="quote-src">— Sharyn Leaver, Chief Research Officer, Forrester (2026 Predictions)</span>
+   </div>
+
+   <h5>New Competencies: The GC as Technology Strategist</h5>
+   <p>The power shift fundamentally changes the General Counsel's profile. McKinsey confirms: Companies with <strong>active C-suite participation</strong> in AI initiatives achieve measurable value <strong>2.6x more often</strong>. Gartner's "Predicts 2026: AI and Agentic AI Will Enable Legal Self-Service" forecasts that agentic AI will transform legal departments through higher lawyer productivity, internal self-service, and automated routine contracts.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
+    <p>The in-house power shift is <strong>no longer a prediction — it's happening</strong>. Legal departments must position themselves as <strong>strategic technology functions</strong>: Double <strong>legal-tech budgets</strong>, build <strong>interdisciplinary teams</strong> (lawyers, data scientists, process experts), and offer <strong>AI governance as internal advisory</strong>. Law firms without demonstrable AI capabilities and transparency will lose market share — the question is not whether, but <strong>how fast</strong>.</p>
+   </div>
+  </div>
+ </div>
+</div>
  </div>
  </div>
 </div>
@@ -1381,7 +1581,7 @@
  <div class="ft">„KI wird Juristen nicht ersetzen — aber Juristen, die KI nutzen, werden diejenigen ersetzen, die es nicht tun."</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* animations removed */
 
 const nav = document.getElementById('navbar');
@@ -1407,6 +1607,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 document.querySelectorAll('.article-header').forEach(h => {
  h.addEventListener('click', function() {
  this.parentElement.classList.toggle('open');
+ });
+});
+
+document.querySelectorAll('.thesis-card-header').forEach(h => {
+ h.addEventListener('click', function() {
+  this.closest('.thesis-card').classList.toggle('open');
  });
 });
 

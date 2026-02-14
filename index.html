@@ -108,7 +108,32 @@
  @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:300; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-300.woff2') format('woff2'); }
  @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-regular.woff2') format('woff2'); }
  @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:500; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-500.woff2') format('woff2'); }
- </style>
+ 
+/* === THESIS CARD DEEP-DIVE ACCORDION === */
+.thesis-card { cursor:pointer; position:relative; }
+.thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
+.thesis-card-header-left { flex:1; }
+.thesis-card-toggle { font-size:0.9rem; color:var(--accent-warm); transition:transform 0.3s; flex-shrink:0; width:1.8rem; height:1.8rem; text-align:center; line-height:1.8rem; background:rgba(255,255,255,0.08); border-radius:50%; font-weight:700; margin-top:0.2rem; }
+.thesis-card.open .thesis-card-toggle { transform:rotate(45deg); background:var(--accent-warm); color:#1a1a2e; }
+.thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
+.thesis-card:hover .thesis-card-hint { opacity:1; }
+.thesis-card.open .thesis-card-hint { display:none; }
+.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
+.thesis-card.open .thesis-deepdive { max-height:12000px; }
+.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
+.thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
+.thesis-deepdive-inner h5:first-child { margin-top:0; }
+.thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
+.thesis-deepdive-inner strong { color:rgba(255,255,255,0.85); }
+.thesis-deepdive-inner em { color:var(--accent-warm); font-style:normal; font-weight:600; }
+.thesis-quote { border-left:2px solid var(--accent-warm); padding:0.4rem 0.8rem; margin:0.5rem 0; background:rgba(255,255,255,0.03); border-radius:0 4px 4px 0; }
+.thesis-quote p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; font-style:italic; }
+.thesis-quote .quote-src { font-style:normal; font-size:0.68rem !important; color:var(--accent-warm) !important; display:block; margin-top:0.2rem; }
+.thesis-outlook { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:0.6rem 0.8rem; margin:0.6rem 0 0.3rem 0; }
+.thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
+.thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
+
+</style>
  <style>
  :root {
  --bg: #FAFAF7; --bg-warm: #F5F3EE; --bg-card: #FFFFFF; --bg-dark: #1a1a2e; --bg-darker: #12121f;
@@ -407,7 +432,32 @@
  .footer-legal { display:flex; gap:1.5rem; margin-top:0.5rem; }
  .footer-legal a { font-size:0.72rem; color:var(--text-muted); text-decoration:none; transition:color 0.3s; cursor:pointer; }
  .footer-legal a:hover { color:var(--accent); text-decoration:underline; }
- </style>
+ 
+/* === THESIS CARD DEEP-DIVE ACCORDION === */
+.thesis-card { cursor:pointer; position:relative; }
+.thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
+.thesis-card-header-left { flex:1; }
+.thesis-card-toggle { font-size:0.9rem; color:var(--accent-warm); transition:transform 0.3s; flex-shrink:0; width:1.8rem; height:1.8rem; text-align:center; line-height:1.8rem; background:rgba(255,255,255,0.08); border-radius:50%; font-weight:700; margin-top:0.2rem; }
+.thesis-card.open .thesis-card-toggle { transform:rotate(45deg); background:var(--accent-warm); color:#1a1a2e; }
+.thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
+.thesis-card:hover .thesis-card-hint { opacity:1; }
+.thesis-card.open .thesis-card-hint { display:none; }
+.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
+.thesis-card.open .thesis-deepdive { max-height:12000px; }
+.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
+.thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
+.thesis-deepdive-inner h5:first-child { margin-top:0; }
+.thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
+.thesis-deepdive-inner strong { color:rgba(255,255,255,0.85); }
+.thesis-deepdive-inner em { color:var(--accent-warm); font-style:normal; font-weight:600; }
+.thesis-quote { border-left:2px solid var(--accent-warm); padding:0.4rem 0.8rem; margin:0.5rem 0; background:rgba(255,255,255,0.03); border-radius:0 4px 4px 0; }
+.thesis-quote p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; font-style:italic; }
+.thesis-quote .quote-src { font-style:normal; font-size:0.68rem !important; color:var(--accent-warm) !important; display:block; margin-top:0.2rem; }
+.thesis-outlook { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:0.6rem 0.8rem; margin:0.6rem 0 0.3rem 0; }
+.thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
+.thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
+
+</style>
 </head>
 <body>
 
@@ -492,25 +542,185 @@
  </div>
  <div class="thesis-cards">
  <div class="thesis-card">
- <h4>Massive Automatisierung von Wissensarbeit</h4>
- <p>McKinsey schätzt, dass 22% der Anwaltstätigkeit und 35% der juristischen Assistenz mit heutiger KI automatisierbar sind. Goldman Sachs beziffert den Anteil automatisierbarer Legal-Tasks auf 44%.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>Massive Automatisierung von Wissensarbeit</h4>
+   <p>McKinsey schätzt, dass 22% der Anwaltstätigkeit und 35% der juristischen Assistenz mit heutiger KI automatisierbar sind. Goldman Sachs beziffert den Anteil automatisierbarer Legal-Tasks auf 44%.</p>
+   <div class="thesis-card-hint">▸ Vertiefung lesen</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>Die Datenlage: Wo steht die Automatisierung wirklich?</h5>
+   <p>McKinseys Report „Agents, Robots, and Us" (November 2025) hat die Diskussion verschärft: <strong>57% aller Arbeitsstunden in den USA</strong> sind mit heutiger Technologie potenziell automatisierbar — fast doppelt so viel wie die 30%-Schätzung von 2023. Für den Rechtsbereich sind die Zahlen besonders einschneidend. Legal und Administrative Services gehören zu den Berufsgruppen mit dem <strong>höchsten Automatisierungspotenzial</strong> — zusammen repräsentieren sie 40% aller US-Löhne in hochautomatisierbaren Tätigkeiten.</p>
+   <p>Die Goldman-Sachs-Studie „The Potentially Large Effects of AI on Economic Growth" (2023) bleibt ein Referenzpunkt: <strong>44% aller juristischen Tätigkeiten</strong> sind durch generative KI automatisierbar — der höchste Wert aller Wissensberufe, noch vor Finanzdienstleistungen (35%) und Management (32%). Die OECD bestätigt diesen Trend: Juristische Berufe gehören global zu den Top-5 der am stärksten KI-exponierten Berufsgruppen.</p>
+
+   <h5>Was konkret automatisiert wird — und was nicht</h5>
+   <p>Die Automatisierung betrifft nicht pauschal „juristische Arbeit", sondern spezifische Aufgabentypen: <strong>Dokumentenreview und -klassifizierung</strong> (Verträge, Compliance-Dokumente, Due-Diligence-Unterlagen), <strong>regulatorische Recherche</strong> (Identifikation relevanter Vorschriften, Änderungsmonitoring), <strong>Standardvertragsgestaltung</strong> (Muster-NDAs, Einkaufsverträge, AGB), <strong>Compliance-Monitoring</strong> (Prüfung gegen Regelwerke, Fristüberwachung) und <strong>Berichterstattung</strong> (Compliance-Reports, Audit-Dokumentation).</p>
+   <p>Was <strong>nicht automatisierbar</strong> bleibt: strategische Rechtsberatung, Verhandlungsführung, Ermessensentscheidungen unter Unsicherheit, die Bewertung neuartiger Rechtsfragen und die ethisch-moralische Abwägung bei Interessenkonflikten. McKinsey betont: Über <strong>70% der heute nachgefragten Kompetenzen</strong> werden auch in einer KI-dominierten Arbeitswelt relevant bleiben — allerdings in verändertem Kontext.</p>
+
+   <div class="thesis-quote">
+    <p>„The AI itself isn't going to kill your law firm — but complacent leadership may."</p>
+    <span class="quote-src">— LawFuel, Analyse des McKinsey AI Report 2025</span>
+   </div>
+
+   <h5>Die McKinsey-Warnung: Das Skalierungsproblem</h5>
+   <p>Die unbequemste Erkenntnis aus McKinseys Global AI Survey 2025 (ca. 2.000 Führungskräfte): <strong>88% der Unternehmen setzen KI ein</strong>, aber nur <strong>39% berichten messbare EBIT-Verbesserungen</strong> — und bei den meisten liegt der Effekt unter 5%. Nur <strong>6% der Unternehmen</strong> — McKinseys „High Performers" — redesignen ihre Workflows grundlegend. Die anderen 94% „streuen KI über 40 Jahre alte Prozesse und erwarten Magie".</p>
+   <p>Für Rechtsabteilungen bedeutet das: Die Automatisierung einzelner Aufgaben (Vertragsreview, Recherche) bringt punktuelle Effizienzgewinne. Der strategische Wertbeitrag entsteht erst, wenn <strong>Workflows end-to-end</strong> neu gestaltet werden — von der Mandatsaufnahme bis zum Reporting.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
+    <p>Unternehmen müssen <strong>jetzt</strong> drei Dinge tun: Erstens eine systematische <strong>Task-Analyse</strong> durchführen — welche konkreten Aufgaben in Legal & Compliance sind automatisierbar, welche erfordern menschliches Urteil? Zweitens <strong>Pilotprojekte mit messbaren KPIs</strong> starten, nicht mit unternehmensweiten Visionen. Drittens die <strong>Weiterqualifizierung</strong> der juristischen Mitarbeiter priorisieren — McKinsey zeigt, dass die Nachfrage nach „AI Fluency" in Stellenausschreibungen sich innerhalb von zwei Jahren <strong>versiebenfacht</strong> hat. Wer in 12 Monaten keine KI-kompetenten Juristen hat, wird sie nicht mehr rekrutieren können.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>Von Buy zu Build: Unternehmen werden zu Softwareentwicklern</h4>
- <p>Low-Code-Plattformen, Foundation Models und Agentic AI ermöglichen es Legal- und Compliance-Teams, eigene Anwendungen zu bauen — ohne klassische IT-Projekte, schneller und passgenauer als jede Standardlösung.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>Von Buy zu Build: Unternehmen werden zu Softwareentwicklern</h4>
+   <p>Low-Code-Plattformen, Foundation Models und Agentic AI ermöglichen es Legal- und Compliance-Teams, eigene Anwendungen zu bauen — ohne klassische IT-Projekte, schneller und passgenauer als jede Standardlösung.</p>
+   <div class="thesis-card-hint">▸ Vertiefung lesen</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>Warum die Eintrittsbarriere gefallen ist</h5>
+   <p>Noch 2022 war die Entwicklung einer eigenen KI-Anwendung ein Projekt für spezialisierte Data-Science-Teams mit sechsstelligen Budgets. Heute bieten <strong>Foundation Models</strong> (OpenAIs GPT-4o, Anthropics Claude, Metas Llama, Mistrals Mixtral) über APIs Zugang zu Sprachverständnis auf Expertenniveau — für wenige Cent pro Abfrage. Frameworks wie <strong>LangChain</strong> und <strong>LlamaIndex</strong> orchestrieren komplexe RAG-Workflows (Retrieval-Augmented Generation), die firmeneigene Dokumente und Policies einbeziehen. Plattformen wie <strong>n8n</strong>, <strong>Make</strong> und <strong>Microsoft Power Platform</strong> ermöglichen es Nicht-Programmierern, KI-Agenten visuell zu konfigurieren.</p>
+   <p>Der BCG-Report „Build for the Future" (2025) beziffert die Konsequenz: Nur <strong>5% der Unternehmen</strong> sind „Future-Built" und generieren skalierten KI-Wert. <strong>60% berichten minimale Ergebnisse</strong> — häufig, weil sie auf generische Standardlösungen setzen, die ihre spezifischen Governance-Anforderungen nicht abbilden.</p>
+
+   <h5>Praxisbeispiele: Wer bereits erfolgreich intern baut</h5>
+   <p><strong>McKinsey „Lilli":</strong> Die interne KI-Plattform wird von 75% der 43.000 Mitarbeiter monatlich genutzt und hat nachweislich über 50.000 Beraterstunden in höherwertige Analysearbeit umgewandelt. <strong>PwC „ChatPwC":</strong> Erstellt Compliance-Reports und verbessert die Audit-Transparenz für über 75.000 geschulte Mitarbeiter. <strong>Klarna:</strong> Der schwedische Finanzdienstleister ersetzte durch interne KI-Entwicklungen Leistungen, die zuvor Salesforce, Workday und externen Kanzleien oblagen — CEO Sebastian Siemiatkowski berichtete 2024, dass KI-Agenten die Arbeit von 700 Kundenservice-Mitarbeitern übernehmen.</p>
+   <p>Im Legal-Bereich zeigt sich der Trend bei Unternehmen wie <strong>Volkswagen AG</strong>, wo im Datenschutz-Bereich mehrere KI-basierte Eigenentwicklungen produktiv eingesetzt wurden: Privacy-Chatbot, automatisierte DSFA-Dokumentation und KI-gestützte Vertragsanalyse — jeweils in Wochen entwickelt, nicht Monaten.</p>
+
+   <div class="thesis-quote">
+    <p>„Organizations with defined AI strategies are 2x more likely to experience revenue growth and 3.5x more likely to realize critical AI benefits."</p>
+    <span class="quote-src">— Steve Hasker, CEO Thomson Reuters, 2026</span>
+   </div>
+
+   <h5>Datensouveränität als strategischer Treiber</h5>
+   <p>Für europäische Unternehmen wird <strong>Datensouveränität</strong> zum zentralen Build-Argument. Die DSGVO, der EU AI Act und branchenspezifische Regulierungen (BaFin-MaRisk, DORA für Finanzinstitute) erfordern Kontrolle über Datenflüsse. Wenn ein US-basierter SaaS-Anbieter Vertragsdaten für Modelltraining verwendet oder Daten in Drittstaaten transferiert, entsteht ein regulatorisches Risiko. Interne Lösungen auf europäischer Cloud-Infrastruktur (IONOS, OVHcloud, Deutsche Telekom Open Telekom Cloud) eliminieren dieses Risiko strukturell.</p>
+   <p>Gartner prognostiziert: Bis 2027 werden <strong>35% der Länder</strong> an regionsspezifische KI-Plattformen gebunden sein. Die Ära grenzenloser KI-Nutzung endet — und europäische Unternehmen, die jetzt interne Kompetenz aufbauen, gewinnen strategische Unabhängigkeit.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
+    <p>Rechtsabteilungen sollten eine <strong>hybride Build-Buy-Strategie</strong> verfolgen: Standardisierte Aufgaben (eDiscovery, CLM, Research) mit etablierten Tools abdecken, aber für <strong>unternehmensspezifische Compliance-Anwendungen</strong> interne Kompetenz aufbauen. Der erste Schritt: Ein <strong>konkretes Pilotprojekt</strong> in 4–6 Wochen — z.B. ein RAG-basierter Policy-Chatbot, der interne Richtlinien durchsuchbar macht. Deloittes State of AI Report (2026) zeigt: Nur <strong>1 von 5 Unternehmen</strong> hat ein ausgereiftes KI-Governance-Modell. Wer jetzt Build-Kompetenz aufbaut und Governance von Anfang an integriert, schafft einen <strong>nachhaltigen Wettbewerbsvorteil</strong>.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>Agentic AI: Von Assistenten zu autonomen Agenten</h4>
- <p>Gartner prognostiziert, dass bis 2026 40% aller Enterprise-Anwendungen KI-Agenten integrieren (heute: unter 5%). Im Legal-Bereich werden Agenten eigenständig recherchieren, prüfen und Compliance-Entscheidungen vorbereiten.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>Agentic AI: Von Assistenten zu autonomen Agenten</h4>
+   <p>Gartner prognostiziert, dass bis 2026 40% aller Enterprise-Anwendungen KI-Agenten integrieren (heute: unter 5%). Im Legal-Bereich werden Agenten eigenständig recherchieren, prüfen und Compliance-Entscheidungen vorbereiten.</p>
+   <div class="thesis-card-hint">▸ Vertiefung lesen</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>Was Agentic AI von bisheriger KI unterscheidet</h5>
+   <p>Die bisherige Generation von KI-Tools arbeitet <strong>reaktiv</strong>: Der Mensch stellt eine Frage, die KI antwortet. Agentic AI markiert einen fundamentalen Paradigmenwechsel — KI-Systeme, die <strong>eigenständig planen, entscheiden, handeln und aus Ergebnissen lernen</strong>. Gartners Senior Director Analyst Anushree Verma beschreibt die Entwicklung in fünf Stufen: Von KI-Assistenten (2025) über aufgabenspezifische Agenten (2026) und kollaborative Multi-Agenten-Systeme (2027–2028) bis hin zur „neuen Normalität" (2029), in der mindestens 50% aller Wissensarbeiter Agenten erstellen, steuern und beaufsichtigen.</p>
+   <p>McKinseys Global AI Survey 2025 bestätigt: <strong>62% der Unternehmen</strong> testen bereits KI-Agenten. Die Nutzung von Agenten ist in IT und Wissensmanagement am weitesten verbreitet, breitet sich aber rasant auf Kundenservice, Sales Operations und Administrative Funktionen aus.</p>
+
+   <h5>Agentic AI im Legal-Bereich: Konkrete Entwicklungen</h5>
+   <p><strong>Thomson Reuters CoCounsel</strong> lanciert Anfang 2026 agentenbasierte Legal-Workflows mit autonomem Document Review und „Deep Research"-Funktionen, die eigenständig über multiple Quellen recherchieren. <strong>LexisNexis Protégé</strong> setzt in der nächsten Generation auf vier spezialisierte Agenten — Orchestrator, Legal Research Agent, Web Search Agent und Customer Document Agent — die bei komplexen Workflows kollaborieren.</p>
+   <p><strong>Harvey AI</strong>, genutzt von Großkanzleien wie Allen & Overy (A&O Shearman) und PwC Legal, entwickelt spezialisierte Legal-Agenten für Vertragserstellung, regulatorische Analyse und Litigation Support. Im CLM-Bereich prognostiziert Gartner für 2026 <strong>Zero-Touch-Contracting</strong> für Niedrigrisikovertrage, „Surgical Redlining" mit 95% Genauigkeit und KI-generierte Verhandlungs-Playbooks.</p>
+
+   <div class="thesis-quote">
+    <p>„AI agents will evolve rapidly, progressing from task and application specific agents to agentic ecosystems. This shift will transform enterprise applications from tools supporting individual productivity into platforms enabling seamless autonomous collaboration."</p>
+    <span class="quote-src">— Anushree Verma, Sr Director Analyst, Gartner (August 2025)</span>
+   </div>
+
+   <h5>Die Governance-Herausforderung: Wer kontrolliert die Agenten?</h5>
+   <p>Die zentrale Frage ist nicht, ob Agenten kommen, sondern <strong>wer sie kontrolliert</strong>. Gartner warnt: Über <strong>40% der Agentic-AI-Projekte</strong> werden bis Ende 2027 abgebrochen — wegen unkontrollierter Kosten oder unklarem Business Value. Die Gründe: fehlende Aufsichtsmechanismen, unklare Verantwortlichkeiten und mangelnde Nachvollziehbarkeit autonomer Entscheidungen.</p>
+   <p>Gartner prognostiziert zudem über <strong>2.000 „Death by AI"-Klagen</strong> bis Ende 2026 wegen unzureichender Risiko-Leitplanken. Für den Legal-Bereich besonders relevant: Wenn ein KI-Agent autonom eine Compliance-Bewertung vornimmt oder einen Vertrag ändert — wer haftet? Der EU AI Act fordert für High-Risk-Systeme <strong>menschliche Aufsicht</strong> (Art. 14) und ein laufendes Risikomanagementsystem (Art. 9). Diese Anforderungen gelten auch und gerade für agentenbasierte Systeme.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
+    <p>Unternehmen sollten <strong>jetzt</strong> drei Dinge vorbereiten: Erstens ein <strong>Agent Governance Framework</strong> — klare Regeln, welche Entscheidungen Agenten autonom treffen dürfen und wo Human-in-the-Loop obligatorisch bleibt. Zweitens <strong>Audit-Trails</strong> für jede agentenbasierte Aktion — ohne lückenlose Nachvollziehbarkeit wird keine regulatorische Prüfung bestanden. Drittens die <strong>Kompetenz zur Agenten-Steuerung</strong> intern aufbauen: Gartner erwartet, dass bis 2029 mindestens 50% der Wissensarbeiter Agenten „on demand" für komplexe Aufgaben erstellen müssen. Rechtsabteilungen, die diese Fähigkeit nicht aufbauen, werden zur <strong>Engstelle der Unternehmens-KI-Strategie</strong>.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>EU AI Act: Compliance wird zur Pflicht</h4>
- <p>Ab August 2026 treten die Kernverpflichtungen des EU AI Act in Kraft. High-Risk-KI-Systeme — auch im Legal-Bereich — benötigen Risikomanagement, technische Dokumentation und menschliche Aufsicht. Strafen bis 35 Mio. € oder 7% des weltweiten Umsatzes.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>EU AI Act: Compliance wird zur Pflicht</h4>
+   <p>Ab August 2026 treten die Kernverpflichtungen des EU AI Act in Kraft. High-Risk-KI-Systeme — auch im Legal-Bereich — benötigen Risikomanagement, technische Dokumentation und menschliche Aufsicht. Strafen bis 35 Mio. € oder 7% des weltweiten Umsatzes.</p>
+   <div class="thesis-card-hint">▸ Vertiefung lesen</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>Der regulatorische Zeitplan: Was gilt ab wann?</h5>
+   <p>Der EU AI Act (Verordnung 2024/1689) wird in <strong>drei Stufen</strong> durchgesetzt: Seit <strong>Februar 2025</strong> gelten die Verbote unzulässiger KI-Praktiken (Social Scoring, unterschwellige Manipulation, biometrische Echtzeit-Fernidentifizierung im öffentlichen Raum). Ab <strong>August 2025</strong> gelten Transparenzpflichten für KI-Systeme mit allgemeinem Verwendungszweck (GPAI), einschließlich der Pflicht zur Kennzeichnung KI-generierter Inhalte. Ab <strong>August 2026</strong> treten die Kernverpflichtungen für <strong>High-Risk-Systeme</strong> in Kraft — die für den Legal-Bereich relevanteste Stufe.</p>
+   <p>KI-Systeme im Bereich <strong>Rechtspflege und demokratischer Prozesse</strong> werden gemäß Annex III, Punkt 8 als High-Risk eingestuft. Dies umfasst KI-gestützte Rechtsberatung, automatisierte Rechtsauslegung und Systeme mit Einfluss auf behördliche Entscheidungen. Die Pflichten: Risikomanagementsystem (Art. 9), Daten-Governance (Art. 10), technische Dokumentation (Art. 11), Aufbewahrungspflicht für Logs (Art. 12), Transparenz (Art. 13), menschliche Aufsicht (Art. 14) und Anforderungen an Genauigkeit, Robustheit und Cybersicherheit (Art. 15).</p>
+
+   <h5>Internationaler Regulierungsdruck: Kein Raum zum Ausweichen</h5>
+   <p>Die EU ist nicht allein. Der <strong>Colorado AI Act</strong> tritt im Juni 2026 in Kraft und reguliert High-Risk-KI mit Transparenz- und Berichtspflichten. Der <strong>Illinois AI in Employment Act</strong> verbietet seit Januar 2026 diskriminierende KI im HR-Bereich. Die <strong>ABA Formal Opinion 512</strong> (Juli 2024) verpflichtet US-Anwälte zu einem „reasonable understanding" der Fähigkeiten und Grenzen von KI-Tools. Dutzende US-Bundesrichter haben Standing Orders erlassen, die KI-Offenlegung und Verifizierung verlangen.</p>
+   <p>Gartner prognostiziert: Bis 2026 werden <strong>80% der Organisationen</strong> formalisierte KI-Richtlinien einführen, die ethische Risiken, Markenrisiken und personenbezogene Daten adressieren. Informelle Policies und Ad-hoc-Experimentierung reichen nicht mehr aus.</p>
+
+   <div class="thesis-quote">
+    <p>„2026 marks the emergence of a new divide among organisations: those that adopt an AI strategy and those that do not."</p>
+    <span class="quote-src">— Steve Hasker, CEO Thomson Reuters</span>
+   </div>
+
+   <h5>Konformitätsbewertung: Was praktisch zu tun ist</h5>
+   <p>Die Konformitätsbewertung nach dem EU AI Act ist kein einmaliges Projekt, sondern ein <strong>laufender Prozess</strong>. Unternehmen müssen: Ein <strong>KI-Inventar</strong> erstellen — welche KI-Systeme sind im Einsatz, welche Risikokategorie gilt? Eine <strong>Risikoanalyse</strong> pro System durchführen — dokumentiert, aktualisiert, überprüft. <strong>Technische Dokumentation</strong> erstellen — Leistungsfähigkeit, Grenzen, Trainingsdaten, bekannte Bias. <strong>Human-Oversight-Mechanismen</strong> implementieren — wer überwacht, wie wird eingegriffen? <strong>Audit-Trails</strong> führen — jede KI-Entscheidung muss nachvollziehbar sein.</p>
+   <p>ISO/IEC 42001:2023 (AI Management Systems) bietet einen internationalen Rahmen, der mit dem EU AI Act kompatibel ist und als Basis für die Konformitätsbewertung dient. Unternehmen, die diesen Standard implementieren, schaffen gleichzeitig die Grundlage für die EU-AI-Act-Compliance.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
+    <p>Bis August 2026 bleiben weniger als <strong>6 Monate</strong>. Unternehmen, die den EU-Markt bedienen, müssen <strong>jetzt handeln</strong>: KI-Inventar erstellen, Risikokategorien zuordnen, Governance-Strukturen aufbauen, Dokumentationsprozesse implementieren. Die Strafen — bis zu <strong>35 Mio. € oder 7% des weltweiten Jahresumsatzes</strong> — machen Nichthandeln zum existenziellen Risiko. Gleichzeitig ist Compliance kein Wettbewerbsnachteil, sondern ein <strong>strategischer Enabler</strong>: Unternehmen mit ausgereifter KI-Governance können schneller skalieren, weil die regulatorischen Fragen bereits beantwortet sind. Thomson Reuters zeigt: Organisationen mit definierter KI-Strategie sind <strong>2x wahrscheinlicher</strong> bei Umsatzwachstum und <strong>3,5x wahrscheinlicher</strong> bei der Realisierung kritischer KI-Vorteile.</p>
+   </div>
+  </div>
+ </div>
+</div>
  <div class="thesis-card">
- <h4>Der In-House Power Shift</h4>
- <p>52% der In-House-Counsel nutzen aktiv GenAI (ACC/Everlaw, 2025) — eine Verdopplung gegenüber dem Vorjahr. 64% setzen KI gezielt ein, um die Abhängigkeit von externen Kanzleien zu reduzieren.</p>
+ <div class="thesis-card-header">
+  <div class="thesis-card-header-left">
+   <h4>Der In-House Power Shift</h4>
+   <p>52% der In-House-Counsel nutzen aktiv GenAI (ACC/Everlaw, 2025) — eine Verdopplung gegenüber dem Vorjahr. 64% setzen KI gezielt ein, um die Abhängigkeit von externen Kanzleien zu reduzieren.</p>
+   <div class="thesis-card-hint">▸ Vertiefung lesen</div>
+  </div>
+  <div class="thesis-card-toggle">+</div>
  </div>
+ <div class="thesis-deepdive">
+  <div class="thesis-deepdive-inner">
+
+   <h5>Die Zahlen hinter dem Machtwechsel</h5>
+   <p>Der ACC/Everlaw GenAI Survey 2025 dokumentiert eine der schnellsten Adoptionswellen in der Geschichte des Rechtsmarktes: Die <strong>GenAI-Nutzung in Rechtsabteilungen hat sich in einem Jahr mehr als verdoppelt</strong> — von 23% auf 52%. Besonders bemerkenswert: <strong>64% der In-House-Teams</strong> erwarten, durch KI-Fähigkeiten, die sie intern aufbauen, <strong>weniger auf externe Kanzleien angewiesen</strong> zu sein. Dieser Trend ist kein Wunschdenken — er wird durch konkrete Investitionen gestützt.</p>
+   <p>Die Implikationen für den Rechtsmarkt sind tiefgreifend. Routinearbeiten, die traditionell an Kanzleien ausgelagert wurden — Vertragsreview, regulatorische Recherche, Due-Diligence-Prüfungen, Standard-Compliance-Beratung — werden zunehmend intern erledigt. Kanzleien, die keine <strong>nachweisbaren KI-Fähigkeiten und Transparenz</strong> über ihren KI-Einsatz bieten, stehen vor einem strukturellen Wettbewerbsnachteil.</p>
+
+   <h5>Was den In-House Power Shift antreibt</h5>
+   <p>Drei Faktoren konvergieren: Erstens die <strong>Verfügbarkeit leistungsfähiger Tools</strong> — CoCounsel, Harvey AI, Luminance und andere ermöglichen es Rechtsabteilungen, Aufgaben intern zu lösen, die vor 24 Monaten externes Fachwissen erforderten. Zweitens der <strong>Kostendruck</strong> — KI-gestützte interne Review-Prozesse kosten einen Bruchteil der Stundensätze externer Kanzleien. Drittens die <strong>Datenkontrolle</strong> — interne Lösungen vermeiden den sensiblen Datentransfer an Dritte.</p>
+   <p>Forrester relativiert allerdings den Hype: Ihre 2026-Prognosen erklären die „KI-Hype-Phase" für beendet und erwarten, dass Unternehmen <strong>25% der geplanten KI-Ausgaben</strong> ins Jahr 2027 verschieben — wegen enttäuschender ROI-Ergebnisse. Nur <strong>15% der KI-Entscheidungsträger</strong> berichteten EBITDA-Verbesserungen in den letzten 12 Monaten. Forresters Chief Research Officer Sharyn Leaver warnt, dass „die Kluft zwischen aufgeblähten Anbieterversprechen und geliefertem Wert sich vergrößert".</p>
+
+   <div class="thesis-quote">
+    <p>„The gap between inflated vendor promises and value delivered is widening, forcing market correction."</p>
+    <span class="quote-src">— Sharyn Leaver, Chief Research Officer, Forrester (2026 Predictions)</span>
+   </div>
+
+   <h5>Neue Kompetenzen: Der General Counsel als Technologie-Stratege</h5>
+   <p>Der Power Shift verändert das Anforderungsprofil des General Counsel fundamental. Neben juristischer Expertise werden <strong>technologisches Grundverständnis</strong>, <strong>Datenaffinität</strong> und die Fähigkeit zur <strong>KI-Governance</strong> erwartet. Thomson Reuters' Future of Professionals Report 2025 zeigt: Die erfolgreichsten Rechtsabteilungen haben dedizierte <strong>Legal-Tech-Verantwortliche</strong>, die Technologie, Prozessoptimierung und juristische Qualitätssicherung verbinden.</p>
+   <p>McKinseys Daten bestätigen: Unternehmen mit <strong>aktiver C-Suite-Beteiligung</strong> an KI-Initiativen erzielen <strong>2,6-mal häufiger</strong> messbaren Wertbeitrag. Gartner prognostiziert in „Predicts 2026: AI and Agentic AI Will Enable Legal Self-Service", dass Agentic AI die Arbeitsweise von Rechtsabteilungen transformieren wird — durch höhere Anwaltsproduktivität, internen Self-Service und automatisierte Routineverträge. Voraussetzung: größere Budgets und eine solide Datengrundlage.</p>
+
+   <div class="thesis-outlook">
+    <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
+    <p>Der In-House Power Shift ist <strong>keine Prognose mehr — er findet statt</strong>. Rechtsabteilungen müssen sich als <strong>strategische Technologie-Funktionen</strong> positionieren, nicht nur als juristische Servicecenter. Konkret heißt das: <strong>Budget für Legal-Tech</strong> verdoppeln (Gartner empfiehlt, GCs müssten größere Budgets sichern), <strong>interdisziplinäre Teams</strong> aus Juristen, Data Scientists und Prozessexperten aufbauen, und <strong>KI-Governance als interne Beratungsleistung</strong> anbieten — denn wer KI-Compliance für das Unternehmen gestaltet, wird zur unverzichtbaren Funktion. Kanzleien ohne demonstrierbare KI-Fähigkeiten und -Transparenz werden Marktanteile verlieren — die Frage ist nicht ob, sondern <strong>wie schnell</strong>.</p>
+   </div>
+  </div>
+ </div>
+</div>
  </div>
  </div>
 </div>
@@ -1383,7 +1593,7 @@
  <div class="ft">„KI wird Juristen nicht ersetzen — aber Juristen, die KI nutzen, werden diejenigen ersetzen, die es nicht tun."</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* animations removed */
 
 const nav = document.getElementById('navbar');
@@ -1409,6 +1619,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 document.querySelectorAll('.article-header').forEach(h => {
  h.addEventListener('click', function() {
  this.parentElement.classList.toggle('open');
+ });
+});
+
+document.querySelectorAll('.thesis-card-header').forEach(h => {
+ h.addEventListener('click', function() {
+  this.closest('.thesis-card').classList.toggle('open');
  });
 });
 
