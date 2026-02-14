@@ -1,7 +1,19 @@
 <!DOCTYPE html>
+<!-- Security: Report vulnerabilities to the site owner via the contact form. -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- SECURITY HEADERS (Maximum Protection for Static Site)     -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()">
+    <!-- ══════════════════════════════════════════════════════════ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheAILawyer.org — Dr. Nicolai Kruck | AI Transformation in Legal & Compliance</title>
     <meta name="description" content="Dr. Nicolai Kruck on the fundamental transformation of Legal, Compliance and Governance through Artificial Intelligence. Strategic analyses for decision-makers.">
@@ -412,9 +424,10 @@
     <a href="#thesis" onclick="this.parentElement.classList.remove('open')">Transformation</a>
     <a href="#strategy" onclick="this.parentElement.classList.remove('open')">Strategy</a>
     <a href="#articles" onclick="this.parentElement.classList.remove('open')">Analyses</a>
+    <a href="tools.html" onclick="this.parentElement.classList.remove('open')">🔧 Tools</a>
     <a href="#realvoice" onclick="this.parentElement.classList.remove('open')">Real Voice</a>
     <a href="#studies" onclick="this.parentElement.classList.remove('open')">Studies</a>
-    <a href="#about" onclick="this.parentElement.classList.remove('open')">Profilee</a>
+    <a href="#about" onclick="this.parentElement.classList.remove('open')">Profile</a>
     <a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a>
     <a href="index.html" onclick="this.parentElement.classList.remove('open')">🇩🇪 Deutsch</a>
 </div>
@@ -593,10 +606,10 @@
 
                         <div class="ref-links">
                             <h5>Weiterführende Quellen</h5>
-                            <a href="https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent" target="_blank" rel="noopener"><span class="ref-org">Goldman Sachs</span> The Potentially Large Effects of AI on Economic Growth (Automation potential by profession) <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.acc.com/about/newsroom/news/acc-genai-report-corporate-law-departments-ai-use-everlaw" target="_blank" rel="noopener"><span class="ref-org">ACC / Everlaw</span> GenAI Use in Corporate Law Departments Doubled — 2025 Report <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.thomsonreuters.com/en-us/posts/technology/future-of-professionals-report-2025/" target="_blank" rel="noopener"><span class="ref-org">Thomson Reuters</span> Future of Professionals Report 2025 — AI Adoption in Legal <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener"><span class="ref-org">McKinsey</span> The State of AI — Global Survey on Enterprise Adoption 2025 <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent" target="_blank" rel="noopener noreferrer"><span class="ref-org">Goldman Sachs</span> The Potentially Large Effects of AI on Economic Growth (Automation potential by profession) <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.acc.com/about/newsroom/news/acc-genai-report-corporate-law-departments-ai-use-everlaw" target="_blank" rel="noopener noreferrer"><span class="ref-org">ACC / Everlaw</span> GenAI Use in Corporate Law Departments Doubled — 2025 Report <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.thomsonreuters.com/en-us/posts/technology/future-of-professionals-report-2025/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Thomson Reuters</span> Future of Professionals Report 2025 — AI Adoption in Legal <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener noreferrer"><span class="ref-org">McKinsey</span> The State of AI — Global Survey on Enterprise Adoption 2025 <span class="ref-arrow">↗</span></a>
                         </div>
                     </div>
                 </div>
@@ -643,11 +656,11 @@
 
                         <div class="ref-links">
                             <h5>Weiterführende Quellen</h5>
-                            <a href="https://www.thomsonreuters.com/en-us/posts/technology/cocounsel-ai-legal-assistant/" target="_blank" rel="noopener"><span class="ref-org">Thomson Reuters</span> CoCounsel — AI-Powered Legal Assistant: Features and Use <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.lawfuel.com/mckinseys-2025-ai-report-warning-for-lawyers/" target="_blank" rel="noopener"><span class="ref-org">McKinsey</span> AI Report 2025: Reality check for law firms — only 6% redesign workflows <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.ey.com/en_gl/newsroom/2025/01/ey-launches-artificial-intelligence-platform-ey-ai" target="_blank" rel="noopener"><span class="ref-org">EY</span> Launch of EY.ai Platform — 80,000 tax professionals supported <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.harvey.ai/" target="_blank" rel="noopener"><span class="ref-org">Harvey AI</span> Specialized AI for Legal Professionals — Platform Overview <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.technologyreview.com/2025/12/04/1108267/ai-cant-think-like-a-lawyer/" target="_blank" rel="noopener"><span class="ref-org">MIT Tech Review</span> AI can't think like a lawyer — Limits of legal AI (Dec. 2025) <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.thomsonreuters.com/en-us/posts/technology/cocounsel-ai-legal-assistant/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Thomson Reuters</span> CoCounsel — AI-Powered Legal Assistant: Features and Use <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.lawfuel.com/mckinseys-2025-ai-report-warning-for-lawyers/" target="_blank" rel="noopener noreferrer"><span class="ref-org">McKinsey</span> AI Report 2025: Reality check for law firms — only 6% redesign workflows <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.ey.com/en_gl/newsroom/2025/01/ey-launches-artificial-intelligence-platform-ey-ai" target="_blank" rel="noopener noreferrer"><span class="ref-org">EY</span> Launch of EY.ai Platform — 80,000 tax professionals supported <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.harvey.ai/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Harvey AI</span> Specialized AI for Legal Professionals — Platform Overview <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.technologyreview.com/2025/12/04/1108267/ai-cant-think-like-a-lawyer/" target="_blank" rel="noopener noreferrer"><span class="ref-org">MIT Tech Review</span> AI can't think like a lawyer — Limits of legal AI (Dec. 2025) <span class="ref-arrow">↗</span></a>
                         </div>
                     </div>
                 </div>
@@ -695,11 +708,11 @@
 
                         <div class="ref-links">
                             <h5>Weiterführende Quellen</h5>
-                            <a href="https://www.artificiallawyer.com/" target="_blank" rel="noopener"><span class="ref-org">Artificial Lawyer</span> Independent news portal for legal AI and legal tech — daily updates <span class="ref-arrow">↗</span></a>
-                            <a href="https://legaltechnologyhub.com/" target="_blank" rel="noopener"><span class="ref-org">Legal Tech Hub</span> Comprehensive database with reviews of 1,500+ legal tech tools <span class="ref-arrow">↗</span></a>
-                            <a href="https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/" target="_blank" rel="noopener"><span class="ref-org">Stanford CodeX</span> Stanford Center for Legal Informatics — Research on AI & Law <span class="ref-arrow">↗</span></a>
-                            <a href="https://clp.law.harvard.edu/" target="_blank" rel="noopener"><span class="ref-org">Harvard CLP</span> Center on the Legal Profession — Research on AI Transformation <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.gartner.com/reviews/market/contract-life-cycle-management" target="_blank" rel="noopener"><span class="ref-org">Gartner</span> Peer Insights: Contract Lifecycle Management — User reviews <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.artificiallawyer.com/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Artificial Lawyer</span> Independent news portal for legal AI and legal tech — daily updates <span class="ref-arrow">↗</span></a>
+                            <a href="https://legaltechnologyhub.com/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Legal Tech Hub</span> Comprehensive database with reviews of 1,500+ legal tech tools <span class="ref-arrow">↗</span></a>
+                            <a href="https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Stanford CodeX</span> Stanford Center for Legal Informatics — Research on AI & Law <span class="ref-arrow">↗</span></a>
+                            <a href="https://clp.law.harvard.edu/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Harvard CLP</span> Center on the Legal Profession — Research on AI Transformation <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.gartner.com/reviews/market/contract-life-cycle-management" target="_blank" rel="noopener noreferrer"><span class="ref-org">Gartner</span> Peer Insights: Contract Lifecycle Management — User reviews <span class="ref-arrow">↗</span></a>
                         </div>
                     </div>
                 </div>
@@ -751,10 +764,10 @@
 
                         <div class="ref-links">
                             <h5>Weiterführende Quellen</h5>
-                            <a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html" target="_blank" rel="noopener"><span class="ref-org">Deloitte</span> State of AI in the Enterprise — 7th Edition (2026): Build vs. buy trends <span class="ref-arrow">↗</span></a>
-                            <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener"><span class="ref-org">Anthropic</span> Build with Claude — Documentation for enterprise applications <span class="ref-arrow">↗</span></a>
-                            <a href="https://learn.microsoft.com/en-us/azure/ai-services/" target="_blank" rel="noopener"><span class="ref-org">Microsoft</span> Azure AI Services — Enterprise AI-Infrastruktur und APIs <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.langchain.com/" target="_blank" rel="noopener"><span class="ref-org">LangChain</span> Open-Source-Framework für LLM-basierte Anwendungen und RAG <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html" target="_blank" rel="noopener noreferrer"><span class="ref-org">Deloitte</span> State of AI in the Enterprise — 7th Edition (2026): Build vs. buy trends <span class="ref-arrow">↗</span></a>
+                            <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener noreferrer"><span class="ref-org">Anthropic</span> Build with Claude — Documentation for enterprise applications <span class="ref-arrow">↗</span></a>
+                            <a href="https://learn.microsoft.com/en-us/azure/ai-services/" target="_blank" rel="noopener noreferrer"><span class="ref-org">Microsoft</span> Azure AI Services — Enterprise AI-Infrastruktur und APIs <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.langchain.com/" target="_blank" rel="noopener noreferrer"><span class="ref-org">LangChain</span> Open-Source-Framework für LLM-basierte Anwendungen und RAG <span class="ref-arrow">↗</span></a>
                         </div>
                     </div>
                 </div>
@@ -801,11 +814,11 @@
 
                         <div class="ref-links">
                             <h5>Weiterführende Quellen</h5>
-                            <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener"><span class="ref-org">EU Kommission</span> EU AI Act — Official regulatory framework and implementation timeline <span class="ref-arrow">↗</span></a>
-                            <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener"><span class="ref-org">AI Act Explorer</span> Full text of the EU AI Act with search and commentary <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence" target="_blank" rel="noopener"><span class="ref-org">EU Parlament</span> EU AI Act — Explanation, timeline and key points of the regulation <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.deloitte.com/de/de/issues/innovation-ai/ai-governance.html" target="_blank" rel="noopener"><span class="ref-org">Deloitte DE</span> Operationalizing AI Governance — Practical guide for the EU AI Act <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.iso.org/standard/81230.html" target="_blank" rel="noopener"><span class="ref-org">ISO</span> ISO/IEC 42001:2023 — International Standard for AI Management Systems <span class="ref-arrow">↗</span></a>
+                            <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer"><span class="ref-org">EU Kommission</span> EU AI Act — Official regulatory framework and implementation timeline <span class="ref-arrow">↗</span></a>
+                            <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener noreferrer"><span class="ref-org">AI Act Explorer</span> Full text of the EU AI Act with search and commentary <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence" target="_blank" rel="noopener noreferrer"><span class="ref-org">EU Parlament</span> EU AI Act — Explanation, timeline and key points of the regulation <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.deloitte.com/de/de/issues/innovation-ai/ai-governance.html" target="_blank" rel="noopener noreferrer"><span class="ref-org">Deloitte DE</span> Operationalizing AI Governance — Practical guide for the EU AI Act <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.iso.org/standard/81230.html" target="_blank" rel="noopener noreferrer"><span class="ref-org">ISO</span> ISO/IEC 42001:2023 — International Standard for AI Management Systems <span class="ref-arrow">↗</span></a>
                         </div>
                     </div>
                 </div>
@@ -847,11 +860,11 @@
 
                         <div class="ref-links">
                             <h5>Weiterführende Quellen</h5>
-                            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener"><span class="ref-org">McKinsey</span> State of AI 2025 — Kapitel „Organizational Readiness" und Change Management <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.deloitte.com/global/en/issues/trust/progress-on-ai-in-the-boardroom-but-room-to-accelerate.html" target="_blank" rel="noopener"><span class="ref-org">Deloitte Global</span> AI in the Boardroom — 695 board members on AI readiness and governance <span class="ref-arrow">↗</span></a>
-                            <a href="https://hbr.org/topic/subject/ai-and-machine-learning" target="_blank" rel="noopener"><span class="ref-org">Harvard BR</span> AI & Machine Learning — Article collection on organizational restructuring and AI adoption <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener"><span class="ref-org">World Economic Forum</span> Future of Jobs Report 2025 — Skills transformation through AI <span class="ref-arrow">↗</span></a>
-                            <a href="https://www.modelop.com/ai-gov-benchmark-report" target="_blank" rel="noopener"><span class="ref-org">ModelOp</span> AI Governance Benchmark — 44% say: Governance is too slow <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener noreferrer"><span class="ref-org">McKinsey</span> State of AI 2025 — Kapitel „Organizational Readiness" und Change Management <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.deloitte.com/global/en/issues/trust/progress-on-ai-in-the-boardroom-but-room-to-accelerate.html" target="_blank" rel="noopener noreferrer"><span class="ref-org">Deloitte Global</span> AI in the Boardroom — 695 board members on AI readiness and governance <span class="ref-arrow">↗</span></a>
+                            <a href="https://hbr.org/topic/subject/ai-and-machine-learning" target="_blank" rel="noopener noreferrer"><span class="ref-org">Harvard BR</span> AI & Machine Learning — Article collection on organizational restructuring and AI adoption <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener noreferrer"><span class="ref-org">World Economic Forum</span> Future of Jobs Report 2025 — Skills transformation through AI <span class="ref-arrow">↗</span></a>
+                            <a href="https://www.modelop.com/ai-gov-benchmark-report" target="_blank" rel="noopener noreferrer"><span class="ref-org">ModelOp</span> AI Governance Benchmark — 44% say: Governance is too slow <span class="ref-arrow">↗</span></a>
                         </div>
                     </div>
                 </div>
@@ -932,37 +945,37 @@
 
         <div class="study-cat-label">Consultancies & Analysts</div>
         <div class="studies-grid">
-            <a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Deloitte</span><span class="study-year">2026</span></div>
                 <h4>State of AI in the Enterprise — 7th Edition</h4>
                 <p>3,235 executives from 24 countries. Agentic AI, sovereign AI, governance gaps. Only 1 in 5 companies has a mature governance model.</p>
                 <span class="study-tag">Enterprise AI</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.deloitte.com/de/de/issues/innovation-ai/ai-governance.html" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.deloitte.com/de/de/issues/innovation-ai/ai-governance.html" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Deloitte Germany</span><span class="study-year">2025</span></div>
                 <h4>Operationalizing AI Governance</h4>
                 <p>Practical guide: AI quality, risk management and compliance in the context of the EU AI Act. Framework for Quality, Risk & Oversight.</p>
                 <span class="study-tag">AI Governance</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.lawfuel.com/mckinseys-2025-ai-report-warning-for-lawyers/" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.lawfuel.com/mckinseys-2025-ai-report-warning-for-lawyers/" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">McKinsey / LawFuel</span><span class="study-year">2025</span></div>
                 <h4>McKinsey's AI Report: Reality Check for Law Firms</h4>
                 <p>Only 6% of companies fundamentally redesign workflows with AI. 88% use AI, but only 39% report measurable EBIT impact.</p>
                 <span class="study-tag">Strategy</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.acc.com/about/newsroom/news/acc-genai-report-corporate-law-departments-ai-use-everlaw" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.acc.com/about/newsroom/news/acc-genai-report-corporate-law-departments-ai-use-everlaw" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">ACC / Everlaw</span><span class="study-year">2025</span></div>
                 <h4>GenAI Use in Corporate Law Departments Doubled</h4>
                 <p>52% of in-house counsel actively use GenAI (2024: 23%). 64% use it to reduce dependence on external law firms.</p>
                 <span class="study-tag">In-House Legal</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.deloitte.com/global/en/issues/trust/progress-on-ai-in-the-boardroom-but-room-to-accelerate.html" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.deloitte.com/global/en/issues/trust/progress-on-ai-in-the-boardroom-but-room-to-accelerate.html" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Deloitte Global</span><span class="study-year">2025</span></div>
                 <h4>Governance of AI: A Critical Imperative for Boards</h4>
                 <p>695 board members from 56 countries. 31% see their organization as not ready for AI deployment. 40% reconsider board composition.</p>
                 <span class="study-tag">Board Governance</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.modelop.com/ai-gov-benchmark-report" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.modelop.com/ai-gov-benchmark-report" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">ModelOp</span><span class="study-year">2025</span></div>
                 <h4>AI Governance Benchmark Report</h4>
                 <p>80% of companies have 50+ GenAI use cases in the pipeline — but only few in production. 44% say: governance is too slow.</p>
@@ -972,25 +985,25 @@
 
         <div class="study-cat-label">Regulation & Legal Framework</div>
         <div class="studies-grid">
-            <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">European Commission</span><span class="study-year">2024–2027</span></div>
                 <h4>EU AI Act — Offizieller Regulierungsrahmen</h4>
                 <p>The world's first comprehensive AI regulation. Risk-based approach, phased implementation, full enforcement from August 2026.</p>
                 <span class="study-tag">Regulation</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">AI Act Explorer</span><span class="study-year">ongoing</span></div>
                 <h4>EU AI Act — Unabhängige Analyse & Compliance-Checker</h4>
                 <p>Complete analysis, timeline, compliance tools and SME guides. Over 150,000 monthly users.</p>
                 <span class="study-tag">Compliance Tool</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.deloitte.com/us/en/services/consulting/articles/iso-42001-standard-ai-governance-risk-management.html" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.deloitte.com/us/en/services/consulting/articles/iso-42001-standard-ai-governance-risk-management.html" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Deloitte / ISO</span><span class="study-year">2025</span></div>
                 <h4>ISO 42001 — Standard für KI-Governance</h4>
                 <p>International standard for AI risk management. Structured approach to compliance with the EU AI Act and beyond.</p>
                 <span class="study-tag">Standard</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.cpomagazine.com/data-protection/2026-ai-legal-forecast-from-innovation-to-compliance/" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.cpomagazine.com/data-protection/2026-ai-legal-forecast-from-innovation-to-compliance/" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">CPO Magazine</span><span class="study-year">2026</span></div>
                 <h4>2026 AI Legal Forecast: Von Innovation zu Compliance</h4>
                 <p>The 10 most important legal developments: copyright lawsuits, EU AI Act enforcement, agent-based liability issues.</p>
@@ -1000,25 +1013,25 @@
 
         <div class="study-cat-label">Legal Tech & Agentic AI</div>
         <div class="studies-grid">
-            <a href="https://natlawreview.com/article/ten-ai-predictions-2026-what-leading-analysts-say-legal-teams-should-expect" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://natlawreview.com/article/ten-ai-predictions-2026-what-leading-analysts-say-legal-teams-should-expect" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">National Law Review</span><span class="study-year">Jan 2026</span></div>
                 <h4>10 AI Predictions for Legal Teams 2026</h4>
                 <p>From Gartner, Forrester, McKinsey: Agentic workflows, mandatory governance, in-house power shift.</p>
                 <span class="study-tag">Predictions</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.dlapiper.com/en/insights/publications/ai-outlook/2025/the-rise-of-agentic-ai--potential-new-legal-and-organizational-risks" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.dlapiper.com/en/insights/publications/ai-outlook/2025/the-rise-of-agentic-ai--potential-new-legal-and-organizational-risks" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">DLA Piper</span><span class="study-year">2025</span></div>
                 <h4>Agentic AI: New Legal and Organizational Risks</h4>
                 <p>Autonomous agents as digital workers: liability questions, governance requirements, escalation protocols.</p>
                 <span class="study-tag">Legal Risk</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.aline.co/post/7-legal-tech-predictions-for-2026" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.aline.co/post/7-legal-tech-predictions-for-2026" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Aline</span><span class="study-year">2026</span></div>
                 <h4>7 Legal Tech Predictions für 2026</h4>
                 <p>Legal AI market grows to $3B (2025). Harvey AI reaches $8B valuation. Agentic AI as the biggest technological shift.</p>
                 <span class="study-tag">Market Analysis</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.technologyreview.com/2025/12/15/1129181/ai-might-not-be-coming-for-lawyers-jobs-anytime-soon/" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.technologyreview.com/2025/12/15/1129181/ai-might-not-be-coming-for-lawyers-jobs-anytime-soon/" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">MIT Technology Review</span><span class="study-year">Dez 2025</span></div>
                 <h4>KI ersetzt Anwälte — noch nicht so schnell</h4>
                 <p>Why LLMs pass the bar exam but have not yet mastered legal thinking. Augmentation over replacement.</p>
@@ -1028,49 +1041,49 @@
 
         <div class="study-cat-label">Consultancies: Strategic AI Reports</div>
         <div class="studies-grid">
-            <a href="https://www.bcg.com/publications/2025/are-you-generating-value-from-ai-the-widening-gap" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.bcg.com/publications/2025/are-you-generating-value-from-ai-the-widening-gap" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">BCG</span><span class="study-year">Sep 2025</span></div>
                 <h4>The Widening AI Value Gap — Build for the Future</h4>
                 <p>1,250 companies worldwide: Only 5% generate scaled AI value. 60% report minimal results despite high investments. Agentic AI already delivers 17% of AI value.</p>
                 <span class="study-tag">Strategy</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.bcg.com/publications/2025/targets-over-tools-the-mandate-for-ai-transformation" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.bcg.com/publications/2025/targets-over-tools-the-mandate-for-ai-transformation" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">BCG</span><span class="study-year">Dez 2025</span></div>
                 <h4>Targets Over Tools: The Mandate for AI Transformation</h4>
                 <p>Why boards need to move AI from a digital side project to a core performance agenda. From pilots to P&L impact.</p>
                 <span class="study-tag">Board Governance</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.accenture.com/us-en/insights/strategy/new-rules-platform-strategy-agentic-ai" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.accenture.com/us-en/insights/strategy/new-rules-platform-strategy-agentic-ai" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Accenture</span><span class="study-year">Jan 2026</span></div>
                 <h4>The New Rules of Platform Strategy in the Age of Agentic AI</h4>
                 <p>Companies with aligned AI, platform and business strategy achieve 2.2× revenue growth and 37% EBITDA lift. 94% of executives expect profound changes.</p>
                 <span class="study-tag">Platform Strategy</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-Six-Key-Insights-for-C-suite-Executives-to-Maximize-Return-on-Agentic-AI.pdf" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-Six-Key-Insights-for-C-suite-Executives-to-Maximize-Return-on-Agentic-AI.pdf" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Accenture</span><span class="study-year">2025</span></div>
                 <h4>Six Key Insights to Maximize ROI from Agentic AI</h4>
                 <p>C-Suite report: When to build internal agentic systems, when to buy? The next 3 years will define the competitive landscape of the next decade.</p>
                 <span class="study-tag">C-Suite Strategy</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://newsroom.accenture.com/news/2025/accenture-technology-vision-2025-new-age-of-ai-to-bring-unprecedented-autonomy-to-business" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://newsroom.accenture.com/news/2025/accenture-technology-vision-2025-new-age-of-ai-to-bring-unprecedented-autonomy-to-business" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Accenture</span><span class="study-year">2025</span></div>
                 <h4>Technology Vision 2025: AI — A Declaration of Autonomy</h4>
                 <p>4,000 executives from 28 countries: 69% see urgent need for reinvention. AI-driven software development democratizes code and enables tailored enterprise solutions.</p>
                 <span class="study-tag">Technology Vision</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.squirepattonboggs.com/insights/publications/the-agentic-ai-revolution-managing-legal-risks/" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.squirepattonboggs.com/insights/publications/the-agentic-ai-revolution-managing-legal-risks/" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Squire Patton Boggs</span><span class="study-year">2025</span></div>
                 <h4>The Agentic AI Revolution: Managing Legal Risks</h4>
                 <p>EU Product Liability Directive includes software and AI as "product". New liability frameworks for autonomous agents. ICO report on data protection implications.</p>
                 <span class="study-tag">Legal Analysis</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://www.navex.com/en-us/blog/article/artificial-intelligence-and-compliance-preparing-for-the-future-of-ai-governance-risk-and-compliance/" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://www.navex.com/en-us/blog/article/artificial-intelligence-and-compliance-preparing-for-the-future-of-ai-governance-risk-and-compliance/" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">NAVEX</span><span class="study-year">2025</span></div>
                 <h4>AI Governance, Risk & Compliance — Preparing for the Future</h4>
                 <p>Only 18% of organizations have an enterprise-wide council for responsible AI governance (McKinsey). Why continuous monitoring becomes mandatory.</p>
                 <span class="study-tag">GRC</span><span class="study-arrow">↗</span>
             </a>
-            <a href="https://corpgov.law.harvard.edu/2025/04/24/strategic-governance-of-ai-a-roadmap-for-the-future/" target="_blank" rel="noopener" class="study-card reveal">
+            <a href="https://corpgov.law.harvard.edu/2025/04/24/strategic-governance-of-ai-a-roadmap-for-the-future/" target="_blank" rel="noopener noreferrer" class="study-card reveal">
                 <div class="study-meta"><span class="study-org">Deloitte / Harvard Law</span><span class="study-year">Apr 2025</span></div>
                 <h4>Strategic Governance of AI: A Roadmap for the Future</h4>
                 <p>AI Governance Roadmap for Boards: End-to-end framework from risk assessment through compliance structures to strategic steering.</p>
@@ -1185,7 +1198,7 @@
     <div class="s-title reveal" style="text-align:center;margin-bottom:0.6rem">Shaping the <em>Future</em> Together</div>
     <p class="s-desc reveal" style="max-width:500px;margin:0 auto 2rem;text-align:center">Interested in AI transformation in legal & compliance, keynotes or strategic exchange?</p>
     <div class="contact-links reveal">
-        <a href="https://de.linkedin.com/in/nicolai-dr-kruck-80550485" target="_blank" rel="noopener" class="contact-link">in LinkedIn</a>
+        <a href="https://de.linkedin.com/in/nicolai-dr-kruck-80550485" target="_blank" rel="noopener noreferrer" class="contact-link">in LinkedIn</a>
     </div>
 
     <!-- DSGVO-KONFORMES KONTAKTFORMULAR -->
@@ -1237,8 +1250,8 @@
 
         <h2>Contact</h2>
         <p>
-            E-Mail: kontakt@theailawyer.org<br>
-            LinkedIn: <a href="https://de.linkedin.com/in/nicolai-dr-kruck-80550485" target="_blank" rel="noopener">de.linkedin.com/in/nicolai-dr-kruck-80550485</a>
+            E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="157e7a7b61747e6155617d70747c7974626c70673b7a6772">[email&#160;protected]</a><br>
+            LinkedIn: <a href="https://de.linkedin.com/in/nicolai-dr-kruck-80550485" target="_blank" rel="noopener noreferrer">de.linkedin.com/in/nicolai-dr-kruck-80550485</a>
         </p>
 
         <h2>Professional Activity</h2>
@@ -1275,7 +1288,7 @@
             Berthold-Lange-Str. 29<br>
             30559 Hannover<br>
             Germany<br>
-            E-Mail: kontakt@theailawyer.org
+            E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8de6e2e3f9ece6f9cdf9e5e8ece4e1ecfaf4e8ffa3e2ffea">[email&#160;protected]</a>
         </p>
 
         <h2>2. General Information on Data Processing</h2>
@@ -1294,7 +1307,7 @@
             <li>Referrer URL (previously visited page)</li>
         </ul>
         <p>Processing is based on Art. 6(1)(f) GDPR on the basis of the legitimate interest in the technical provision and security of the website. Data is not merged with other data sources and is deleted after 30 days at the latest.</p>
-        <p>Netlify may process data in the USA. Transfer is based on the EU-US Data Privacy Framework (DPF) or Standard Contractual Clauses (Art. 46(2)(c) GDPR). More information: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">netlify.com/privacy</a>.</p>
+        <p>Netlify may process data in the USA. Transfer is based on the EU-US Data Privacy Framework (DPF) or Standard Contractual Clauses (Art. 46(2)(c) GDPR). More information: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">netlify.com/privacy</a>.</p>
 
         <h2>4. Fonts (Locally Hosted)</h2>
         <p>This website uses the fonts Playfair Display, Source Sans 3 and IBM Plex Mono. All fonts are <strong>hosted locally on our own web server</strong>. When loading fonts, <strong>no connection to external servers</strong> (in particular not to Google) is established. No data is transmitted to third parties. The fonts are available under the SIL Open Font License and are free to use.</p>
@@ -1309,7 +1322,7 @@
             <li><strong>Storage period:</strong> Until your inquiry is fully processed, then deletion unless statutory retention obligations exist</li>
         </ul>
         <p>The form uses a simple spam protection (honeypot method) that works <strong>without cookies and without tracking</strong>. No additional services (e.g., reCAPTCHA) are integrated.</p>
-        <p>Form submission is handled by <strong>Formspree</strong> (Formspree, Inc., USA). Formspree processes submitted data exclusively for forwarding to the site operator. More information: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy Policy</a>.</p>
+        <p>Form submission is handled by <strong>Formspree</strong> (Formspree, Inc., USA). Formspree processes submitted data exclusively for forwarding to the site operator. More information: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree Privacy Policy</a>.</p>
 
         <h2>6. Contact via Email</h2>
         <p>When you contact us by email, the data you provide (email address, name if applicable, message content) is stored for the purpose of processing your inquiry. Legal basis is Art. 6(1)(f) GDPR (legitimate interest). Data is deleted once it is no longer needed for its purpose.</p>
@@ -1344,7 +1357,7 @@
         <p>
             The State Commissioner for Data Protection of Lower Saxony<br>
             Prinzenstraße 5, 30159 Hannover<br>
-            <a href="https://www.lfd.niedersachsen.de" target="_blank" rel="noopener">www.lfd.niedersachsen.de</a>
+            <a href="https://www.lfd.niedersachsen.de" target="_blank" rel="noopener noreferrer">www.lfd.niedersachsen.de</a>
         </p>
 
         <h2>11. Changes to This Privacy Policy</h2>
@@ -1363,7 +1376,7 @@
     <div class="ft">„KI wird Juristen nicht ersetzen — aber Juristen, die KI nutzen, werden diejenigen ersetzen, die es nicht tun."</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold:0.1, rootMargin:'0px 0px -50px 0px' });
@@ -1444,16 +1457,4 @@ if(contactForm) {
             headers: { 'Accept': 'application/json' }
         }).then(response => {
             if(response.ok) {
-                document.getElementById('formSuccess').classList.add('show');
-                contactForm.style.display = 'none';
-            } else {
-                alert('There was a problem sending. Please try by email.');
-            }
-        }).catch(() => {
-            alert('Connection error. Please try via LinkedIn or again later.');
-        });
-    });
-}
-</script>
-</body>
-</html>
+                document.getEleme
