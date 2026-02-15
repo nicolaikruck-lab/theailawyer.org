@@ -1528,8 +1528,8 @@
  <div>
  <p>© 2026 TheAILawyer.org — Dr. Nicolai Kruck</p>
  <div class="footer-legal">
- <a onclick="openLegal('impressum')">Impressum</a>
- <a onclick="openLegal('datenschutz')">Datenschutzerklärung</a>
+ <a href="javascript:void(0)" onclick="openLegal('impressum')">Impressum</a>
+ <a href="javascript:void(0)" onclick="openLegal('datenschutz')">Datenschutzerklärung</a>
  </div>
  </div>
  <div class="ft">„KI wird Juristen nicht ersetzen — aber Juristen, die KI nutzen, werden diejenigen ersetzen, die es nicht tun."</div>
@@ -1562,9 +1562,6 @@ document.querySelectorAll('.article-header').forEach(h => {
  h.addEventListener('click', function() {
  this.parentElement.classList.toggle('open');
  });
-});
-
-
 });
 
 
