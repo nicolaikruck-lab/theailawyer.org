@@ -89,51 +89,7 @@
  }
  </script>
  <!-- Fonts: lokal gehostet (DSGVO-konform, kein Google-Server-Kontakt) -->
- <style>
- /* === PLAYFAIR DISPLAY === */
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/playfair-display-latin-regular.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:italic; font-weight:400; font-display:swap; src:url('./fonts/playfair-display-latin-italic.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:600; font-display:swap; src:url('./fonts/playfair-display-latin-600.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:italic; font-weight:600; font-display:swap; src:url('./fonts/playfair-display-latin-600italic.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:700; font-display:swap; src:url('./fonts/playfair-display-latin-700.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:800; font-display:swap; src:url('./fonts/playfair-display-latin-800.woff2') format('woff2'); }
- /* === SOURCE SANS 3 === */
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:300; font-display:swap; src:url('./fonts/source-sans-3-latin-300.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/source-sans-3-latin-regular.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:italic; font-weight:400; font-display:swap; src:url('./fonts/source-sans-3-latin-italic.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:500; font-display:swap; src:url('./fonts/source-sans-3-latin-500.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:600; font-display:swap; src:url('./fonts/source-sans-3-latin-600.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:700; font-display:swap; src:url('./fonts/source-sans-3-latin-700.woff2') format('woff2'); }
- /* === IBM PLEX MONO === */
- @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:300; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-300.woff2') format('woff2'); }
- @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-regular.woff2') format('woff2'); }
- @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:500; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-500.woff2') format('woff2'); }
  
-/* === THESIS CARD DEEP-DIVE ACCORDION === */
-.thesis-card { cursor:pointer; position:relative; }
-.thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
-.thesis-card-header-left { flex:1; }
-.thesis-card-toggle { font-size:0.9rem; color:var(--accent-warm); transition:transform 0.3s; flex-shrink:0; width:1.8rem; height:1.8rem; text-align:center; line-height:1.8rem; background:rgba(255,255,255,0.08); border-radius:50%; font-weight:700; margin-top:0.2rem; }
-.thesis-card.open .thesis-card-toggle { transform:rotate(45deg); background:var(--accent-warm); color:#1a1a2e; }
-.thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
-.thesis-card:hover .thesis-card-hint { opacity:1; }
-.thesis-card.open .thesis-card-hint { display:none; }
-.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
-.thesis-card.open .thesis-deepdive { max-height:12000px; }
-.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
-.thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
-.thesis-deepdive-inner h5:first-child { margin-top:0; }
-.thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
-.thesis-deepdive-inner strong { color:rgba(255,255,255,0.85); }
-.thesis-deepdive-inner em { color:var(--accent-warm); font-style:normal; font-weight:600; }
-.thesis-quote { border-left:2px solid var(--accent-warm); padding:0.4rem 0.8rem; margin:0.5rem 0; background:rgba(255,255,255,0.03); border-radius:0 4px 4px 0; }
-.thesis-quote p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; font-style:italic; }
-.thesis-quote .quote-src { font-style:normal; font-size:0.68rem !important; color:var(--accent-warm) !important; display:block; margin-top:0.2rem; }
-.thesis-outlook { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:0.6rem 0.8rem; margin:0.6rem 0 0.3rem 0; }
-.thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
-.thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
-
-</style>
  <style>
  :root {
  --bg: #FAFAF7; --bg-warm: #F5F3EE; --bg-card: #FFFFFF; --bg-dark: #1a1a2e; --bg-darker: #12121f;
@@ -433,6 +389,8 @@
  .footer-legal a { font-size:0.72rem; color:var(--text-muted); text-decoration:none; transition:color 0.3s; cursor:pointer; }
  .footer-legal a:hover { color:var(--accent); text-decoration:underline; }
  
+
+
 /* === THESIS CARD DEEP-DIVE ACCORDION === */
 .thesis-card { cursor:pointer; position:relative; }
 .thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
@@ -442,9 +400,8 @@
 .thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
 .thesis-card:hover .thesis-card-hint { opacity:1; }
 .thesis-card.open .thesis-card-hint { display:none; }
-.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
-.thesis-card.open .thesis-deepdive { max-height:12000px; }
-.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
+.thesis-deepdive-inner { max-height:0; overflow:hidden; transition:max-height 0.5s ease; padding:0 0; }
+.thesis-card.open .thesis-deepdive-inner { max-height:12000px; padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
 .thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
 .thesis-deepdive-inner h5:first-child { margin-top:0; }
 .thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
@@ -550,10 +507,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>Die Datenlage: Wo steht die Automatisierung wirklich?</h5>
+ <div class="thesis-deepdive-inner">
+<h5>Die Datenlage: Wo steht die Automatisierung wirklich?</h5>
    <p>McKinseys Report „Agents, Robots, and Us" (November 2025) hat die Diskussion verschärft: <strong>57% aller Arbeitsstunden in den USA</strong> sind mit heutiger Technologie potenziell automatisierbar — fast doppelt so viel wie die 30%-Schätzung von 2023. Für den Rechtsbereich sind die Zahlen besonders einschneidend. Legal und Administrative Services gehören zu den Berufsgruppen mit dem <strong>höchsten Automatisierungspotenzial</strong> — zusammen repräsentieren sie 40% aller US-Löhne in hochautomatisierbaren Tätigkeiten.</p>
    <p>Die Goldman-Sachs-Studie „The Potentially Large Effects of AI on Economic Growth" (2023) bleibt ein Referenzpunkt: <strong>44% aller juristischen Tätigkeiten</strong> sind durch generative KI automatisierbar — der höchste Wert aller Wissensberufe, noch vor Finanzdienstleistungen (35%) und Management (32%). Die OECD bestätigt diesen Trend: Juristische Berufe gehören global zu den Top-5 der am stärksten KI-exponierten Berufsgruppen.</p>
 
@@ -573,9 +528,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
     <p>Unternehmen müssen <strong>jetzt</strong> drei Dinge tun: Erstens eine systematische <strong>Task-Analyse</strong> durchführen — welche konkreten Aufgaben in Legal & Compliance sind automatisierbar, welche erfordern menschliches Urteil? Zweitens <strong>Pilotprojekte mit messbaren KPIs</strong> starten, nicht mit unternehmensweiten Visionen. Drittens die <strong>Weiterqualifizierung</strong> der juristischen Mitarbeiter priorisieren — McKinsey zeigt, dass die Nachfrage nach „AI Fluency" in Stellenausschreibungen sich innerhalb von zwei Jahren <strong>versiebenfacht</strong> hat. Wer in 12 Monaten keine KI-kompetenten Juristen hat, wird sie nicht mehr rekrutieren können.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -586,10 +540,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>Warum die Eintrittsbarriere gefallen ist</h5>
+ <div class="thesis-deepdive-inner">
+<h5>Warum die Eintrittsbarriere gefallen ist</h5>
    <p>Noch 2022 war die Entwicklung einer eigenen KI-Anwendung ein Projekt für spezialisierte Data-Science-Teams mit sechsstelligen Budgets. Heute bieten <strong>Foundation Models</strong> (OpenAIs GPT-4o, Anthropics Claude, Metas Llama, Mistrals Mixtral) über APIs Zugang zu Sprachverständnis auf Expertenniveau — für wenige Cent pro Abfrage. Frameworks wie <strong>LangChain</strong> und <strong>LlamaIndex</strong> orchestrieren komplexe RAG-Workflows (Retrieval-Augmented Generation), die firmeneigene Dokumente und Policies einbeziehen. Plattformen wie <strong>n8n</strong>, <strong>Make</strong> und <strong>Microsoft Power Platform</strong> ermöglichen es Nicht-Programmierern, KI-Agenten visuell zu konfigurieren.</p>
    <p>Der BCG-Report „Build for the Future" (2025) beziffert die Konsequenz: Nur <strong>5% der Unternehmen</strong> sind „Future-Built" und generieren skalierten KI-Wert. <strong>60% berichten minimale Ergebnisse</strong> — häufig, weil sie auf generische Standardlösungen setzen, die ihre spezifischen Governance-Anforderungen nicht abbilden.</p>
 
@@ -609,9 +561,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
     <p>Rechtsabteilungen sollten eine <strong>hybride Build-Buy-Strategie</strong> verfolgen: Standardisierte Aufgaben (eDiscovery, CLM, Research) mit etablierten Tools abdecken, aber für <strong>unternehmensspezifische Compliance-Anwendungen</strong> interne Kompetenz aufbauen. Der erste Schritt: Ein <strong>konkretes Pilotprojekt</strong> in 4–6 Wochen — z.B. ein RAG-basierter Policy-Chatbot, der interne Richtlinien durchsuchbar macht. Deloittes State of AI Report (2026) zeigt: Nur <strong>1 von 5 Unternehmen</strong> hat ein ausgereiftes KI-Governance-Modell. Wer jetzt Build-Kompetenz aufbaut und Governance von Anfang an integriert, schafft einen <strong>nachhaltigen Wettbewerbsvorteil</strong>.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -622,10 +573,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>Was Agentic AI von bisheriger KI unterscheidet</h5>
+ <div class="thesis-deepdive-inner">
+<h5>Was Agentic AI von bisheriger KI unterscheidet</h5>
    <p>Die bisherige Generation von KI-Tools arbeitet <strong>reaktiv</strong>: Der Mensch stellt eine Frage, die KI antwortet. Agentic AI markiert einen fundamentalen Paradigmenwechsel — KI-Systeme, die <strong>eigenständig planen, entscheiden, handeln und aus Ergebnissen lernen</strong>. Gartners Senior Director Analyst Anushree Verma beschreibt die Entwicklung in fünf Stufen: Von KI-Assistenten (2025) über aufgabenspezifische Agenten (2026) und kollaborative Multi-Agenten-Systeme (2027–2028) bis hin zur „neuen Normalität" (2029), in der mindestens 50% aller Wissensarbeiter Agenten erstellen, steuern und beaufsichtigen.</p>
    <p>McKinseys Global AI Survey 2025 bestätigt: <strong>62% der Unternehmen</strong> testen bereits KI-Agenten. Die Nutzung von Agenten ist in IT und Wissensmanagement am weitesten verbreitet, breitet sich aber rasant auf Kundenservice, Sales Operations und Administrative Funktionen aus.</p>
 
@@ -645,9 +594,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
     <p>Unternehmen sollten <strong>jetzt</strong> drei Dinge vorbereiten: Erstens ein <strong>Agent Governance Framework</strong> — klare Regeln, welche Entscheidungen Agenten autonom treffen dürfen und wo Human-in-the-Loop obligatorisch bleibt. Zweitens <strong>Audit-Trails</strong> für jede agentenbasierte Aktion — ohne lückenlose Nachvollziehbarkeit wird keine regulatorische Prüfung bestanden. Drittens die <strong>Kompetenz zur Agenten-Steuerung</strong> intern aufbauen: Gartner erwartet, dass bis 2029 mindestens 50% der Wissensarbeiter Agenten „on demand" für komplexe Aufgaben erstellen müssen. Rechtsabteilungen, die diese Fähigkeit nicht aufbauen, werden zur <strong>Engstelle der Unternehmens-KI-Strategie</strong>.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -658,10 +606,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>Der regulatorische Zeitplan: Was gilt ab wann?</h5>
+ <div class="thesis-deepdive-inner">
+<h5>Der regulatorische Zeitplan: Was gilt ab wann?</h5>
    <p>Der EU AI Act (Verordnung 2024/1689) wird in <strong>drei Stufen</strong> durchgesetzt: Seit <strong>Februar 2025</strong> gelten die Verbote unzulässiger KI-Praktiken (Social Scoring, unterschwellige Manipulation, biometrische Echtzeit-Fernidentifizierung im öffentlichen Raum). Ab <strong>August 2025</strong> gelten Transparenzpflichten für KI-Systeme mit allgemeinem Verwendungszweck (GPAI), einschließlich der Pflicht zur Kennzeichnung KI-generierter Inhalte. Ab <strong>August 2026</strong> treten die Kernverpflichtungen für <strong>High-Risk-Systeme</strong> in Kraft — die für den Legal-Bereich relevanteste Stufe.</p>
    <p>KI-Systeme im Bereich <strong>Rechtspflege und demokratischer Prozesse</strong> werden gemäß Annex III, Punkt 8 als High-Risk eingestuft. Dies umfasst KI-gestützte Rechtsberatung, automatisierte Rechtsauslegung und Systeme mit Einfluss auf behördliche Entscheidungen. Die Pflichten: Risikomanagementsystem (Art. 9), Daten-Governance (Art. 10), technische Dokumentation (Art. 11), Aufbewahrungspflicht für Logs (Art. 12), Transparenz (Art. 13), menschliche Aufsicht (Art. 14) und Anforderungen an Genauigkeit, Robustheit und Cybersicherheit (Art. 15).</p>
 
@@ -681,9 +627,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
     <p>Bis August 2026 bleiben weniger als <strong>6 Monate</strong>. Unternehmen, die den EU-Markt bedienen, müssen <strong>jetzt handeln</strong>: KI-Inventar erstellen, Risikokategorien zuordnen, Governance-Strukturen aufbauen, Dokumentationsprozesse implementieren. Die Strafen — bis zu <strong>35 Mio. € oder 7% des weltweiten Jahresumsatzes</strong> — machen Nichthandeln zum existenziellen Risiko. Gleichzeitig ist Compliance kein Wettbewerbsnachteil, sondern ein <strong>strategischer Enabler</strong>: Unternehmen mit ausgereifter KI-Governance können schneller skalieren, weil die regulatorischen Fragen bereits beantwortet sind. Thomson Reuters zeigt: Organisationen mit definierter KI-Strategie sind <strong>2x wahrscheinlicher</strong> bei Umsatzwachstum und <strong>3,5x wahrscheinlicher</strong> bei der Realisierung kritischer KI-Vorteile.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -694,10 +639,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>Die Zahlen hinter dem Machtwechsel</h5>
+ <div class="thesis-deepdive-inner">
+<h5>Die Zahlen hinter dem Machtwechsel</h5>
    <p>Der ACC/Everlaw GenAI Survey 2025 dokumentiert eine der schnellsten Adoptionswellen in der Geschichte des Rechtsmarktes: Die <strong>GenAI-Nutzung in Rechtsabteilungen hat sich in einem Jahr mehr als verdoppelt</strong> — von 23% auf 52%. Besonders bemerkenswert: <strong>64% der In-House-Teams</strong> erwarten, durch KI-Fähigkeiten, die sie intern aufbauen, <strong>weniger auf externe Kanzleien angewiesen</strong> zu sein. Dieser Trend ist kein Wunschdenken — er wird durch konkrete Investitionen gestützt.</p>
    <p>Die Implikationen für den Rechtsmarkt sind tiefgreifend. Routinearbeiten, die traditionell an Kanzleien ausgelagert wurden — Vertragsreview, regulatorische Recherche, Due-Diligence-Prüfungen, Standard-Compliance-Beratung — werden zunehmend intern erledigt. Kanzleien, die keine <strong>nachweisbaren KI-Fähigkeiten und Transparenz</strong> über ihren KI-Einsatz bieten, stehen vor einem strukturellen Wettbewerbsnachteil.</p>
 
@@ -717,9 +660,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Zukunftsausblick & Handlungsempfehlungen</div>
     <p>Der In-House Power Shift ist <strong>keine Prognose mehr — er findet statt</strong>. Rechtsabteilungen müssen sich als <strong>strategische Technologie-Funktionen</strong> positionieren, nicht nur als juristische Servicecenter. Konkret heißt das: <strong>Budget für Legal-Tech</strong> verdoppeln (Gartner empfiehlt, GCs müssten größere Budgets sichern), <strong>interdisziplinäre Teams</strong> aus Juristen, Data Scientists und Prozessexperten aufbauen, und <strong>KI-Governance als interne Beratungsleistung</strong> anbieten — denn wer KI-Compliance für das Unternehmen gestaltet, wird zur unverzichtbaren Funktion. Kanzleien ohne demonstrierbare KI-Fähigkeiten und -Transparenz werden Marktanteile verlieren — die Frage ist nicht ob, sondern <strong>wie schnell</strong>.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  </div>
  </div>
@@ -1622,10 +1564,16 @@ document.querySelectorAll('.article-header').forEach(h => {
  });
 });
 
-document.querySelectorAll('.thesis-card-header').forEach(h => {
- h.addEventListener('click', function() {
-  this.closest('.thesis-card').classList.toggle('open');
- });
+
+});
+
+
+/* ---- THESIS CARD DEEP-DIVES ---- */
+document.querySelectorAll('.thesis-card-header').forEach(function(header) {
+  header.addEventListener('click', function() {
+    var card = this.parentElement;
+    card.classList.toggle('open');
+  });
 });
 
 /* ---- LEGAL OVERLAYS ---- */

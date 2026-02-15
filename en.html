@@ -88,51 +88,7 @@
  }
  </script>
  <!-- Fonts: lokal gehostet (DSGVO-konform, kein Google-Server-Contact) -->
- <style>
- /* === PLAYFAIR DISPLAY === */
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/playfair-display-latin-regular.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:italic; font-weight:400; font-display:swap; src:url('./fonts/playfair-display-latin-italic.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:600; font-display:swap; src:url('./fonts/playfair-display-latin-600.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:italic; font-weight:600; font-display:swap; src:url('./fonts/playfair-display-latin-600italic.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:700; font-display:swap; src:url('./fonts/playfair-display-latin-700.woff2') format('woff2'); }
- @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:800; font-display:swap; src:url('./fonts/playfair-display-latin-800.woff2') format('woff2'); }
- /* === SOURCE SANS 3 === */
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:300; font-display:swap; src:url('./fonts/source-sans-3-latin-300.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/source-sans-3-latin-regular.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:italic; font-weight:400; font-display:swap; src:url('./fonts/source-sans-3-latin-italic.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:500; font-display:swap; src:url('./fonts/source-sans-3-latin-500.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:600; font-display:swap; src:url('./fonts/source-sans-3-latin-600.woff2') format('woff2'); }
- @font-face { font-family:'Source Sans 3'; font-style:normal; font-weight:700; font-display:swap; src:url('./fonts/source-sans-3-latin-700.woff2') format('woff2'); }
- /* === IBM PLEX MONO === */
- @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:300; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-300.woff2') format('woff2'); }
- @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-regular.woff2') format('woff2'); }
- @font-face { font-family:'IBM Plex Mono'; font-style:normal; font-weight:500; font-display:swap; src:url('./fonts/ibm-plex-mono-latin-500.woff2') format('woff2'); }
  
-/* === THESIS CARD DEEP-DIVE ACCORDION === */
-.thesis-card { cursor:pointer; position:relative; }
-.thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
-.thesis-card-header-left { flex:1; }
-.thesis-card-toggle { font-size:0.9rem; color:var(--accent-warm); transition:transform 0.3s; flex-shrink:0; width:1.8rem; height:1.8rem; text-align:center; line-height:1.8rem; background:rgba(255,255,255,0.08); border-radius:50%; font-weight:700; margin-top:0.2rem; }
-.thesis-card.open .thesis-card-toggle { transform:rotate(45deg); background:var(--accent-warm); color:#1a1a2e; }
-.thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
-.thesis-card:hover .thesis-card-hint { opacity:1; }
-.thesis-card.open .thesis-card-hint { display:none; }
-.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
-.thesis-card.open .thesis-deepdive { max-height:12000px; }
-.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
-.thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
-.thesis-deepdive-inner h5:first-child { margin-top:0; }
-.thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
-.thesis-deepdive-inner strong { color:rgba(255,255,255,0.85); }
-.thesis-deepdive-inner em { color:var(--accent-warm); font-style:normal; font-weight:600; }
-.thesis-quote { border-left:2px solid var(--accent-warm); padding:0.4rem 0.8rem; margin:0.5rem 0; background:rgba(255,255,255,0.03); border-radius:0 4px 4px 0; }
-.thesis-quote p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; font-style:italic; }
-.thesis-quote .quote-src { font-style:normal; font-size:0.68rem !important; color:var(--accent-warm) !important; display:block; margin-top:0.2rem; }
-.thesis-outlook { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:0.6rem 0.8rem; margin:0.6rem 0 0.3rem 0; }
-.thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
-.thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
-
-</style>
  <style>
  :root {
  --bg: #FAFAF7; --bg-warm: #F5F3EE; --bg-card: #FFFFFF; --bg-dark: #1a1a2e; --bg-darker: #12121f;
@@ -432,6 +388,8 @@
  .footer-legal a { font-size:0.72rem; color:var(--text-muted); text-decoration:none; transition:color 0.3s; cursor:pointer; }
  .footer-legal a:hover { color:var(--accent); text-decoration:underline; }
  
+
+
 /* === THESIS CARD DEEP-DIVE ACCORDION === */
 .thesis-card { cursor:pointer; position:relative; }
 .thesis-card-header { display:flex; justify-content:space-between; align-items:flex-start; }
@@ -441,9 +399,8 @@
 .thesis-card-hint { font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.04em; margin-top:0.3rem; opacity:0.6; transition:opacity 0.3s; font-family:var(--font-m); }
 .thesis-card:hover .thesis-card-hint { opacity:1; }
 .thesis-card.open .thesis-card-hint { display:none; }
-.thesis-deepdive { max-height:0; overflow:hidden; transition:max-height 0.6s ease; }
-.thesis-card.open .thesis-deepdive { max-height:12000px; }
-.thesis-deepdive-inner { padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
+.thesis-deepdive-inner { max-height:0; overflow:hidden; transition:max-height 0.5s ease; padding:0 0; }
+.thesis-card.open .thesis-deepdive-inner { max-height:12000px; padding:0.8rem 0 0.3rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:0.6rem; }
 .thesis-deepdive-inner h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.95); margin:0.7rem 0 0.3rem 0; font-weight:600; }
 .thesis-deepdive-inner h5:first-child { margin-top:0; }
 .thesis-deepdive-inner p { font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.5rem; }
@@ -548,10 +505,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>The Data: Where Does Automation Really Stand?</h5>
+ <div class="thesis-deepdive-inner">
+<h5>The Data: Where Does Automation Really Stand?</h5>
    <p>McKinsey's report "Agents, Robots, and Us" (November 2025) sharpened the debate: <strong>57% of all U.S. work hours</strong> are potentially automatable with today's technology — nearly double the 30% estimate from 2023. For the legal sector, the numbers are particularly striking. Legal and Administrative Services rank among the occupations with the <strong>highest automation potential</strong> — together representing 40% of all U.S. wages in highly automatable roles.</p>
    <p>Goldman Sachs' study "The Potentially Large Effects of AI on Economic Growth" (2023) remains a key reference: <strong>44% of all legal tasks</strong> are automatable by generative AI — the highest rate among all knowledge professions, ahead of financial services (35%) and management (32%). The OECD confirms this trend: Legal professions rank globally among the top 5 most AI-exposed occupational groups.</p>
 
@@ -569,9 +524,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
     <p>Companies must act <strong>now</strong>: Conduct a systematic <strong>task analysis</strong> — which legal tasks are automatable, which require human judgment? Launch <strong>pilot projects with measurable KPIs</strong>, not enterprise-wide visions. Prioritize <strong>upskilling</strong> — McKinsey shows demand for "AI fluency" in job postings has <strong>grown sevenfold</strong> in two years. Organizations without AI-competent legal teams in 12 months won't be able to recruit them.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -582,10 +536,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>Why the Barrier to Entry Has Fallen</h5>
+ <div class="thesis-deepdive-inner">
+<h5>Why the Barrier to Entry Has Fallen</h5>
    <p>Foundation Models (OpenAI's GPT-4o, Anthropic's Claude, Meta's Llama, Mistral's Mixtral) provide expert-level language understanding via APIs — for pennies per query. Frameworks like <strong>LangChain</strong> and <strong>LlamaIndex</strong> orchestrate complex RAG workflows incorporating proprietary documents. Platforms like <strong>n8n</strong>, <strong>Make</strong>, and <strong>Microsoft Power Platform</strong> enable non-programmers to configure AI agents visually.</p>
    <p>BCG's "Build for the Future" report (2025): Only <strong>5% of companies</strong> are "Future-Built" generating scaled AI value. <strong>60% report minimal results</strong> — often because they rely on generic solutions that don't address their specific governance requirements.</p>
 
@@ -603,9 +555,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
     <p>Pursue a <strong>hybrid build-buy strategy</strong>: Cover standardized tasks with established tools, but build internal competence for <strong>company-specific compliance applications</strong>. First step: A <strong>concrete pilot project in 4–6 weeks</strong> — e.g., a RAG-based policy chatbot. Deloitte's State of AI Report (2026): Only <strong>1 in 5 companies</strong> has a mature AI governance model. Building capability now creates <strong>sustainable competitive advantage</strong>.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -616,10 +567,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>What Distinguishes Agentic AI from Current Tools</h5>
+ <div class="thesis-deepdive-inner">
+<h5>What Distinguishes Agentic AI from Current Tools</h5>
    <p>Current AI tools work <strong>reactively</strong>: humans ask, AI responds. Agentic AI marks a paradigm shift — systems that <strong>autonomously plan, decide, act, and learn from results</strong>. Gartner's Anushree Verma describes five stages: From AI assistants (2025) through task-specific agents (2026) and collaborative multi-agent systems (2027–2028) to the "new normal" (2029), where 50%+ of knowledge workers create and govern agents.</p>
    <p>McKinsey's 2025 Global AI Survey confirms: <strong>62% of companies</strong> are already testing AI agents, with adoption fastest in IT, knowledge management, and customer service.</p>
 
@@ -637,9 +586,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
     <p>Prepare <strong>now</strong>: Build an <strong>Agent Governance Framework</strong> — which decisions can agents make autonomously, where is human-in-the-loop mandatory? Implement <strong>audit trails</strong> for every agent action. Build <strong>agent management competence</strong> internally: Gartner expects 50%+ of knowledge workers to create agents "on demand" by 2029. Legal departments that don't build this capability become the <strong>bottleneck of the enterprise AI strategy</strong>.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -650,10 +598,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>The Regulatory Timeline</h5>
+ <div class="thesis-deepdive-inner">
+<h5>The Regulatory Timeline</h5>
    <p>The EU AI Act (Regulation 2024/1689) is enforced in <strong>three stages</strong>: Since <strong>February 2025</strong>, prohibitions on unacceptable AI practices apply. From <strong>August 2025</strong>, transparency obligations for general-purpose AI (GPAI) take effect. From <strong>August 2026</strong>, core obligations for <strong>high-risk systems</strong> become enforceable — the most relevant stage for legal departments.</p>
    <p>AI systems in <strong>administration of justice and democratic processes</strong> (Annex III, Point 8) are classified as high-risk. Obligations include: risk management (Art. 9), data governance (Art. 10), technical documentation (Art. 11), logging (Art. 12), transparency (Art. 13), human oversight (Art. 14), and accuracy/robustness/cybersecurity requirements (Art. 15).</p>
 
@@ -671,9 +617,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
     <p>Less than <strong>6 months</strong> until August 2026. Organizations serving the EU market must <strong>act now</strong>: create AI inventories, assign risk categories, build governance structures. Penalties — up to <strong>€35M or 7% of global revenue</strong> — make inaction an existential risk. Yet compliance is a <strong>strategic enabler</strong>: Organizations with mature AI governance can scale faster. Thomson Reuters shows: Organizations with defined AI strategies are <strong>2x more likely</strong> to achieve revenue growth and <strong>3.5x more likely</strong> to realize critical AI benefits.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  <div class="thesis-card">
  <div class="thesis-card-header">
@@ -684,10 +629,8 @@
   </div>
   <div class="thesis-card-toggle">+</div>
  </div>
- <div class="thesis-deepdive">
-  <div class="thesis-deepdive-inner">
-
-   <h5>The Numbers Behind the Power Shift</h5>
+ <div class="thesis-deepdive-inner">
+<h5>The Numbers Behind the Power Shift</h5>
    <p>The ACC/Everlaw GenAI Survey 2025 documents one of the fastest adoption waves in legal market history: <strong>GenAI usage in legal departments more than doubled</strong> in one year — from 23% to 52%. Notably, <strong>64% of in-house teams</strong> expect to <strong>depend less on outside counsel</strong> through internally built AI capabilities. Routine work traditionally outsourced to law firms is increasingly handled internally.</p>
 
    <h5>What Drives the In-House Power Shift</h5>
@@ -705,9 +648,8 @@
    <div class="thesis-outlook">
     <div class="thesis-outlook-label">🔮 Outlook & Recommendations</div>
     <p>The in-house power shift is <strong>no longer a prediction — it's happening</strong>. Legal departments must position themselves as <strong>strategic technology functions</strong>: Double <strong>legal-tech budgets</strong>, build <strong>interdisciplinary teams</strong> (lawyers, data scientists, process experts), and offer <strong>AI governance as internal advisory</strong>. Law firms without demonstrable AI capabilities and transparency will lose market share — the question is not whether, but <strong>how fast</strong>.</p>
-   </div>
-  </div>
- </div>
+    </div>
+</div>
 </div>
  </div>
  </div>
@@ -1610,10 +1552,16 @@ document.querySelectorAll('.article-header').forEach(h => {
  });
 });
 
-document.querySelectorAll('.thesis-card-header').forEach(h => {
- h.addEventListener('click', function() {
-  this.closest('.thesis-card').classList.toggle('open');
- });
+
+});
+
+
+/* ---- THESIS CARD DEEP-DIVES ---- */
+document.querySelectorAll('.thesis-card-header').forEach(function(header) {
+  header.addEventListener('click', function() {
+    var card = this.parentElement;
+    card.classList.toggle('open');
+  });
 });
 
 /* ---- LEGAL OVERLAYS ---- */
