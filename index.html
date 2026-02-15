@@ -414,6 +414,42 @@
 .thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
 .thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
 
+/* === BREAKING NEWS BANNER === */
+.breaking-news-banner { position:relative; margin-top:52px; background:linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom:2px solid var(--accent-warm); overflow:hidden; z-index:900; }
+.breaking-news-header { display:flex; align-items:center; padding:0.65rem 2.5rem; cursor:pointer; gap:0.8rem; transition:background 0.3s; }
+.breaking-news-header:hover { background:rgba(255,255,255,0.03); }
+.breaking-news-badge { display:inline-flex; align-items:center; gap:0.35rem; background:var(--accent-warm); color:#1a1a2e; font-family:var(--font-m); font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.2rem 0.6rem; border-radius:3px; white-space:nowrap; flex-shrink:0; }
+.breaking-news-badge::before { content:''; width:6px; height:6px; background:#1a1a2e; border-radius:50%; animation:bnPulse 1.5s ease-in-out infinite; }
+@keyframes bnPulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+.breaking-news-headline { font-family:var(--font-b); font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.92); flex:1; line-height:1.4; }
+.breaking-news-headline span { color:var(--accent-warm); }
+.breaking-news-toggle { font-size:0.7rem; color:var(--accent-warm); font-family:var(--font-m); letter-spacing:0.04em; transition:transform 0.3s; flex-shrink:0; opacity:0.7; }
+.breaking-news-banner.open .breaking-news-toggle { transform:rotate(180deg); }
+.breaking-news-body { max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
+.breaking-news-banner.open .breaking-news-body { max-height:5000px; }
+.breaking-news-content { padding:0 2.5rem 1.2rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+@media(max-width:900px) { .breaking-news-content { grid-template-columns:1fr; } }
+.bn-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.8rem 1rem; }
+.bn-card-label { font-family:var(--font-m); font-size:0.58rem; color:var(--accent-warm); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.4rem; }
+.bn-card h5 { font-family:var(--font-d); font-size:0.88rem; color:rgba(255,255,255,0.92); font-weight:600; margin-bottom:0.3rem; }
+.bn-card p { font-size:0.76rem; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:0.3rem; }
+.bn-card strong { color:rgba(255,255,255,0.85); }
+.bn-card code { font-family:var(--font-m); font-size:0.72rem; background:rgba(201,168,76,0.15); color:var(--accent-warm); padding:0.1rem 0.35rem; border-radius:3px; }
+.bn-commands { display:flex; flex-wrap:wrap; gap:0.4rem; margin:0.5rem 0; }
+.bn-cmd { font-family:var(--font-m); font-size:0.66rem; background:rgba(201,168,76,0.12); color:var(--accent-warm); padding:0.25rem 0.5rem; border-radius:4px; border:1px solid rgba(201,168,76,0.2); }
+.bn-impact { background:rgba(229,62,62,0.08); border-color:rgba(229,62,62,0.15); }
+.bn-impact .bn-card-label { color:#fc8181; }
+.bn-source { font-size:0.65rem; color:rgba(255,255,255,0.35); font-family:var(--font-m); margin-top:0.3rem; }
+.bn-footer { padding:0 2.5rem 0.8rem; }
+.bn-footer p { font-size:0.68rem; color:rgba(255,255,255,0.4); font-style:italic; }
+.bn-traffic { display:flex; gap:0.6rem; margin:0.5rem 0; flex-wrap:wrap; }
+.bn-traffic-item { display:flex; align-items:center; gap:0.3rem; font-size:0.72rem; }
+.bn-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.bn-dot.green { background:#48bb78; }
+.bn-dot.yellow { background:#ecc94b; }
+.bn-dot.red { background:#fc8181; }
+.bn-traffic-item span { color:rgba(255,255,255,0.6); font-size:0.72rem; }
+
 </style>
 </head>
 <body>
@@ -451,6 +487,80 @@
  <span class="sticker-icon">🚧</span>
  ACHTUNG BAUSTELLE
  <span class="sticker-sub">Experimentelle Webseite</span>
+</div>
+
+<!-- ========== BREAKING NEWS ========== -->
+<div class="breaking-news-banner" id="breakingNews">
+ <div class="breaking-news-header" onclick="document.getElementById('breakingNews').classList.toggle('open')">
+  <div class="breaking-news-badge">⚡ Breaking</div>
+  <div class="breaking-news-headline">Anthropics Legal-Plugin für Claude Cowork erschüttert die Legal-Tech-Branche — <span>$285 Mrd. Marktwert vernichtet</span></div>
+  <div class="breaking-news-toggle">▾ Details</div>
+ </div>
+ <div class="breaking-news-body">
+  <div class="breaking-news-content">
+
+   <div class="bn-card">
+    <div class="bn-card-label">Was ist passiert?</div>
+    <h5>Anthropic betritt den Legal-Tech-Markt direkt</h5>
+    <p>Am <strong>2. Februar 2026</strong> veröffentlichte Anthropic ein Legal-Plugin für seine agentenbasierte Desktop-Plattform <strong>Claude Cowork</strong>. Erstmals bietet ein Foundation-Model-Unternehmen ein juristisches Workflow-Produkt direkt an — statt nur APIs an Legal-Tech-Anbieter zu liefern. Das Plugin ist <strong>Open Source</strong> (GitHub) und als eines von 11 spezialisierten Plugins erschienen. Es richtet sich an In-House Counsel, Commercial Counsel, Privacy/Compliance-Teams und Litigation Support.</p>
+    <p class="bn-source">Quellen: LawNext, Legal IT Insider, Law.com, Artificial Lawyer — Feb. 2026</p>
+   </div>
+
+   <div class="bn-card bn-impact">
+    <div class="bn-card-label">Marktreaktion</div>
+    <h5>$285 Milliarden Sell-Off an einem Tag</h5>
+    <p>Die Ankündigung löste laut Bloomberg einen der größten KI-getriebenen Sell-Offs der Geschichte aus. <strong>Thomson Reuters</strong> verlor ca. 16%, <strong>RELX</strong> (LexisNexis) ca. 14%. Auch FactSet, S&P Global und Accenture wurden erfasst. Morgan Stanley stufte die Entwicklung als „Zeichen intensivierenden Wettbewerbs" ein. Morningstar nannte das Plugin den „ersten direkten Vorstoß eines großen LLM-Anbieters in die Legal-Technologie". Jefferies prägte den Begriff <strong>„SaaSpocalypse"</strong>.</p>
+    <p class="bn-source">Quellen: Bloomberg, Yahoo Finance, The Daily Upside, Metaintro — Feb. 2026</p>
+   </div>
+
+   <div class="bn-card">
+    <div class="bn-card-label">Slash-Commands</div>
+    <h5>Die fünf Kernfunktionen des Legal-Plugins</h5>
+    <div class="bn-commands">
+     <span class="bn-cmd">/review-contract</span>
+     <span class="bn-cmd">/triage-nda</span>
+     <span class="bn-cmd">/vendor-check</span>
+     <span class="bn-cmd">/brief</span>
+     <span class="bn-cmd">/respond</span>
+    </div>
+    <p><code>/review-contract</code> prüft Verträge Klausel für Klausel gegen ein konfigurierbares Verhandlungs-Playbook mit einem Ampel-System:</p>
+    <div class="bn-traffic">
+     <div class="bn-traffic-item"><span class="bn-dot green"></span> <span>Konform mit Playbook</span></div>
+     <div class="bn-traffic-item"><span class="bn-dot yellow"></span> <span>Abweichung — Review empfohlen</span></div>
+     <div class="bn-traffic-item"><span class="bn-dot red"></span> <span>Erhebliches Risiko — Eskalation</span></div>
+    </div>
+    <p><code>/triage-nda</code> kategorisiert eingehende NDAs automatisch für Standard-Freigabe, juristische Prüfung oder vollständige Verhandlung. <code>/vendor-check</code> prüft den Status von Lieferantenverträgen. <code>/brief</code> erstellt kontextbezogene Briefings (Tages-Briefings, Themenrecherche, Incident Response). <code>/respond</code> generiert standardisierte Antworten für wiederkehrende Anfragen wie Betroffenenrechte-Anfragen (DSARs) und Discovery Holds.</p>
+   </div>
+
+   <div class="bn-card">
+    <div class="bn-card-label">Architektur & Technik</div>
+    <h5>Wie das Plugin funktioniert</h5>
+    <p>Das Plugin läuft in <strong>Claude Cowork</strong>, das Anthropic als „Claude Code für den Rest Ihrer Arbeit" positioniert. Cowork arbeitet lokal auf dem Rechner des Nutzers, führt Aufgaben in einer <strong>sandboxed Virtual Machine</strong> aus und kann Dateien lesen, erstellen und bearbeiten. Anders als im Chat arbeitet Cowork <strong>agentenbasiert</strong>: Man beschreibt ein Ziel, gibt Zugriff auf einen Ordner — und Claude plant und exekutiert autonom mehrere Schritte.</p>
+    <p>Technisch besteht das Plugin aus <strong>Markdown-Dateien</strong> (Skills + Commands), einer <strong>plugin.json</strong> (Metadaten) und <strong>mcp.json</strong> (MCP-Connector-Konfiguration). Die Anbindung an bestehende Tools (CRM, DMS, CLM) erfolgt über das <strong>Model Context Protocol (MCP)</strong> — Anthropics offener Standard für bidirektionale KI-Tool-Integration. Pramata hat bereits eine Integration angekündigt.</p>
+    <p>Voraussetzung: <strong>Claude Pro, Team oder Enterprise Abo</strong> (ab $20/Monat). Das Plugin selbst ist Open Source und kostenlos.</p>
+   </div>
+
+   <div class="bn-card">
+    <div class="bn-card-label">Einordnung</div>
+    <h5>Warum das ein Paradigmenwechsel ist</h5>
+    <p>Bisherige Legal-Tech-Anbieter wie <strong>Harvey AI</strong> ($8 Mrd. Bewertung), <strong>Legora</strong> ($1,8 Mrd.) und die KI-Produkte von Thomson Reuters und LexisNexis bauen auf Foundation Models — und bezahlen dafür API-Gebühren. Jetzt konkurriert der Modell-Anbieter selbst mit seinen eigenen Kunden. <strong>Above the Law</strong> spricht von einem „Vulkaneffekt" — die Legal-Tech-Branche könnte sich grundlegend verändern.</p>
+    <p>Entscheidend: Das Plugin ist <strong>konfigurierbar auf das eigene Playbook</strong> und die eigenen Risikotoleranzen. Unternehmen können es ohne Vendor-Abhängigkeit an ihre spezifischen Anforderungen anpassen. Gleichzeitig betont Anthropic: <em>„All outputs should be reviewed by licensed attorneys"</em> — es ersetzt keine Juristen, es beschleunigt sie.</p>
+   </div>
+
+   <div class="bn-card">
+    <div class="bn-card-label">Praxis-Szenarien</div>
+    <h5>Konkrete Anwendungsfälle</h5>
+    <p><strong>NDA-Flut bewältigen:</strong> Ein In-House-Team erhält 30 NDAs pro Woche. Claude kategorisiert automatisch nach Standard-Freigabe, Review oder vollständiger Verhandlung — die Juristin prüft die priorisierte Warteschlange statt den Stapel.</p>
+    <p><strong>Vertragsreview vor Unterschrift:</strong> Ein 47-Seiten-Lieferantenvertrag muss bis Freitag geprüft werden. <code>/review-contract</code> vergleicht Klausel für Klausel mit dem internen Playbook, flaggt Abweichungen und liefert konkrete Redline-Vorschläge. Antwort in Stunden statt Tagen.</p>
+    <p><strong>Compliance-Monitoring:</strong> Laufende Überwachung von DSGVO-, CCPA- und SOC-2-Verpflichtungen. Das Plugin flaggt Abweichungen in Lieferantenverträgen, trackt Verlängerungsdaten und identifiziert Compliance-Lücken.</p>
+    <p>Teams berichten: Erste Vertragsprüfungen beschleunigen sich um <strong>70–90%</strong>, wobei die eigentliche juristische Bewertung weiterhin beim Anwalt liegt.</p>
+   </div>
+  </div>
+
+  <div class="bn-footer">
+   <p>Hinweis: Diese Zusammenfassung basiert auf öffentlich verfügbaren Quellen (LawNext, Legal IT Insider, Above the Law, Artificial Lawyer, Law.com, Bloomberg/Yahoo Finance, Anthropic) und stellt keine Rechtsberatung oder Anlageempfehlung dar. Stand: Februar 2026.</p>
+  </div>
+ </div>
 </div>
 
 <!-- ========== HERO ========== -->
