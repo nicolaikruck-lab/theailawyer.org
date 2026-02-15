@@ -1629,4 +1629,16 @@ if(contactForm) {
  headers: { 'Accept': 'application/json' }
  }).then(response => {
  if(response.ok) {
- document.getElementById('formSuccess').classList.add('
+ document.getElementById('formSuccess').classList.add('show');
+ this.style.display = 'none';
+ } else {
+ alert('Fehler beim Senden. Bitte versuchen Sie es später erneut.');
+ }
+ }).catch(() => {
+ alert('Verbindungsfehler. Bitte versuchen Sie es später erneut.');
+ });
+ });
+}
+</script>
+</body>
+</html>

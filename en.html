@@ -1617,4 +1617,16 @@ if(contactForm) {
  headers: { 'Accept': 'application/json' }
  }).then(response => {
  if(response.ok) {
- document.getEleme
+ document.getElementById('formSuccess').classList.add('show');
+ this.style.display = 'none';
+ } else {
+ alert('Error sending message. Please try again later.');
+ }
+ }).catch(() => {
+ alert('Connection error. Please try again later.');
+ });
+ });
+}
+</script>
+</body>
+</html>
