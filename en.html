@@ -5,16 +5,16 @@
 <head>
  <meta charset="UTF-8">
  <meta name="google-site-verification" content="BRPLPZh97zB3ZCqMvNECdia0uR7YUo6z_i4DFOpqQsE" />
- <!-- ══════════════════════════════════════════════════════════ -->
+ <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
  <!-- SECURITY HEADERS (Maximum Protection for Static Site) -->
- <!-- ══════════════════════════════════════════════════════════ -->
+ <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
  <meta http-equiv="X-Content-Type-Options" content="nosniff">
  <meta http-equiv="X-Frame-Options" content="DENY">
  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
  <meta name="referrer" content="strict-origin-when-cross-origin">
  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()">
- <!-- ══════════════════════════════════════════════════════════ -->
+ <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>TheAILawyer.org — Dr. Nicolai Kruck | AI Transformation in Legal & Compliance</title>
  <meta name="description" content="Dr. Nicolai Kruck on the fundamental transformation of Legal, Compliance and Governance through Artificial Intelligence. Strategic analyses for decision-makers.">
@@ -305,10 +305,10 @@
  .nav-dropdown-menu { min-width:180px; left:0; transform:translateX(0) translateY(4px); }
  .nav-dropdown.open .nav-dropdown-menu { transform:translateX(0) translateY(0); }
  .nav-dropdown-menu::before { left:30px; }
- .hero-content { grid-template-columns:1fr; gap:1rem; padding:1.2rem 3rem 0.8rem; }
+ .hero-content { grid-template-columns:1fr; gap:1rem; padding:4rem 2rem 1.5rem; }
  .hero-portrait { max-width:300px; margin:0 auto; order:-1; }
  section { padding:1rem 3rem; }
- .inner { padding:0 3rem; }
+ .inner { padding:0 2rem; }
  .thesis-section .inner { grid-template-columns:1fr; gap:0.8rem; }
  .about-grid { grid-template-columns:1fr; gap:0.8rem; }
  .pillars-grid, .security-grid, .steps-grid { grid-template-columns:1fr; }
@@ -328,12 +328,7 @@
  .mobile-menu a:hover { color:var(--accent); }
  .mobile-menu-close { position:absolute; top:1.2rem; right:1.5rem; background:none; border:none; font-size:1.8rem; cursor:pointer; color:var(--text); }
 
- /* BAUSTELLE STICKER */
- .baustelle-sticker { position:fixed; top:100px; right:20px; z-index:999; background:#FFD600; color:#000; font-family:var(--font-b); font-weight:800; font-size:0.75rem; padding:0.8rem 1.2rem; transform:rotate(8deg); box-shadow:0 4px 15px rgba(0,0,0,0.2); border:3px dashed #000; border-radius:4px; text-align:center; line-height:1.3; max-width:160px; cursor:default; animation:wobble 3s ease-in-out infinite; }
- .baustelle-sticker .sticker-icon { font-size:1.4rem; display:block; margin-bottom:0.3rem; }
- .baustelle-sticker .sticker-sub { font-weight:500; font-size:0.65rem; margin-top:0.2rem; display:block; }
- @keyframes wobble { 0%,100% { transform:rotate(8deg); } 50% { transform:rotate(5deg) scale(1.02); } }
- @media(max-width:968px) { .baustelle-sticker { top:70px; right:10px; font-size:0.65rem; padding:0.6rem 0.8rem; max-width:130px; } }
+  }
 
  /* REAL VOICE SECTION */
  .realvoice-section { background:linear-gradient(135deg, #f8f4e8 0%, #f0ead6 100%); padding:1rem 0; border-top:3px solid var(--accent-warm); border-bottom:3px solid var(--accent-warm); }
@@ -414,6 +409,56 @@
 .thesis-outlook-label { font-family:var(--font-m); font-size:0.62rem; color:var(--accent-warm); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem; }
 .thesis-outlook p { font-size:0.76rem !important; color:rgba(255,255,255,0.7) !important; }
 
+
+ /* ========================================
+    MOBILE RESPONSIVE (< 480px)
+    ======================================== */
+ @media(max-width:480px) {
+   html { scroll-padding-top:70px; }
+   nav { padding:0.5rem 0.8rem; }
+   .nav-logo { font-size:1.05rem; }
+   .nav-links { gap:0.3rem; }
+   .nav-links > a, .nav-dropdown-trigger { font-size:0.5rem; }
+   .lang-tag { font-size:0.55rem; padding:0.15rem 0.35rem; }
+   .hero-content { padding:4rem 1.2rem 1.5rem; grid-template-columns:1fr; }
+   .hero-title { font-size:clamp(1.7rem,7vw,2.4rem); }
+   .hero-subtitle { font-size:0.92rem; }
+   .hero-cta { flex-direction:column; gap:0.6rem; }
+   .btn-p, .btn-o { width:100%; text-align:center; justify-content:center; font-size:0.78rem; }
+   .hero-portrait { max-width:220px; margin:0 auto 1rem; }
+   section { padding:1.5rem 1.2rem; }
+   .inner { padding:0 1.2rem; }
+   .sec-title { font-size:1.5rem; }
+   .numbers-strip { grid-template-columns:repeat(2,1fr); gap:0.6rem; }
+   .article-header { padding:0.8rem 1rem; }
+   .a-title { font-size:0.9rem; }
+   .contact-section { padding:1.5rem 1.2rem; margin:0 0.5rem; border-radius:10px; }
+   .btn-send { width:100%; }
+   footer { padding:1.5rem 1.2rem; }
+   .legal-page { margin:0.5rem; padding:1.5rem 1.2rem; }
+   .legal-page h1 { font-size:1.4rem; }
+   .legal-page h2 { font-size:1rem; }
+   .legal-page p, .legal-page ul li { font-size:0.82rem; }
+   .legal-close { top:1rem; right:1rem; }
+   .pillars-grid, .security-grid, .steps-grid { grid-template-columns:1fr; gap:0.8rem; }
+   .nav-dropdown-menu { min-width:160px; }
+   .nav-dropdown-menu a { font-size:0.6rem; }
+   .thesis-card { padding:1rem; }
+   .thesis-card-header { padding:1rem 1rem 0; }
+ }
+
+ @media(min-width:481px) and (max-width:767px) {
+   .hero-content { padding:4.5rem 1.8rem 1.5rem; }
+   .hero-title { font-size:clamp(2rem,5.5vw,2.8rem); }
+   section { padding:1.8rem 1.8rem; }
+   .inner { padding:0 1.8rem; }
+   .numbers-strip { grid-template-columns:repeat(2,1fr); }
+   .contact-section { margin:0 0.8rem; }
+ }
+
+ @media(hover:none) {
+   .btn-p:hover, .btn-o:hover { transform:none; }
+ }
 </style>
 </head>
 <body>
@@ -445,12 +490,7 @@
 
 <!-- mobile menu removed - nav always visible -->
 
-<!-- CONSTRUCTION STICKER -->
-<div class="baustelle-sticker">
- <span class="sticker-icon">🚧</span>
- UNDER CONSTRUCTION
- <span class="sticker-sub">Experimental Website</span>
-</div>
+
 
 <!-- ========== HERO ========== -->
 <section class="hero">
@@ -489,7 +529,7 @@
  </div>
  <div class="tension-vs">⟷</div>
  <div class="tension-side">
- <div class="t-icon">🛡️</div>
+ <div class="t-icon">🛡ï¸</div>
  <div class="t-label">Regulatory Side</div>
  <div class="t-items">GDPR / EU AI Act<br>IT Security<br>Auditability<br>Accountability</div>
  </div>
@@ -663,7 +703,7 @@
  <div class="s-desc">The key factors that will determine the success and relevance of legal and compliance functions in the years ahead.</div>
  <div class="pillars-grid">
  <div class="pillar">
- <span class="pillar-icon">🏗️</span>
+ <span class="pillar-icon">ðŸ—ï¸</span>
  <h3>Build Instead of Buy</h3>
  <p>Rigid standard solutions with long implementation cycles are being replaced by in-house AI applications. Foundation models like GPT-4, Claude or Llama make it possible to develop domain-specific legal and compliance tools in weeks rather than years — adapted to your own governance, data and risk landscape.</p>
  <div class="pillar-tag">Build vs. Buy • Sovereignty • Time-to-Value</div>
@@ -675,7 +715,7 @@
  <div class="pillar-tag">AI Agents • No-Code • Automation</div>
  </div>
  <div class="pillar">
- <span class="pillar-icon">🛡️</span>
+ <span class="pillar-icon">🛡ï¸</span>
  <h3>Governance by Design</h3>
  <p>Innovation without a control framework is negligent. The EU AI Act, GDPR and industry-specific regulation require that AI governance be built into the architecture from the start — not retrofitted. Only 1 in 5 companies has a mature governance model for autonomous AI systems (Deloitte, 2026). Those who invest early gain room to maneuver.</p>
  <div class="pillar-tag">EU AI Act • GDPR • Risk Management</div>
@@ -705,7 +745,7 @@
  <div class="lbl">maximum penalty under the EU AI Act — or 7% of global annual revenue</div>
  </div>
  </div>
- <p style="font-size:0.68rem;color:var(--text-muted);text-align:center;">Sources: McKinsey Global AI Survey 2025 · BCG Build for the Future 2025 · Gartner Top Tech Trends 2025 · EU AI Act (Regulation 2024/1689) · ACC/Everlaw GenAI Report 2025 · Deloitte State of AI 2026</p>
+ <p style="font-size:0.68rem;color:var(--text-muted);text-align:center;">Sources: McKinsey Global AI Survey 2025 Â· BCG Build for the Future 2025 Â· Gartner Top Tech Trends 2025 Â· EU AI Act (Regulation 2024/1689) Â· ACC/Everlaw GenAI Report 2025 Â· Deloitte State of AI 2026</p>
 </section>
 
 <div class="divider"><hr></div>
@@ -1025,7 +1065,7 @@
 <!-- ========== REAL VOICE ========== -->
 <div class="realvoice-section" id="realvoice">
  <div class="inner">
- <div class="realvoice-badge">✍️ Real Voice</div>
+ <div class="realvoice-badge">✍ï¸ Real Voice</div>
  <div class="s-title">My <em>Own</em> Thoughts</div>
  <div class="s-desc">In this section you will find texts written exclusively by me — Dr. Nicolai Kruck — personally. No AI, no automation, no generated content. Just my own reflections, experiences and perspectives.</div>
  
@@ -1058,7 +1098,7 @@
  </ul>
  </div>
  <div class="sec-card">
- <span class="sec-icon">🏛️</span>
+ <span class="sec-icon">ðŸ›ï¸</span>
  <h4>EU AI Act & Regulation</h4>
  <p>The EU AI Act classifies AI systems by risk. Legal AI often falls under "High Risk" with extensive obligations for providers and deployers alike.</p>
  <ul>
@@ -1069,7 +1109,7 @@
  </ul>
  </div>
  <div class="sec-card">
- <span class="sec-icon">🛡️</span>
+ <span class="sec-icon">🛡ï¸</span>
  <h4>IT Security & Sovereignty</h4>
  <p>AI systems expand the attack surface. Especially with autonomous agents, the need for cybersecurity governance grows exponentially — from prompt injection to data exfiltration.</p>
  <ul>
@@ -1307,7 +1347,7 @@
  <div class="tl-item">
  <div class="tl-year">2008 — 2012</div>
  <h3>In-House Counsel & Associate</h3>
- <h4>Infineon Technologies · Noerr · Clifford Chance</h4>
+ <h4>Infineon Technologies Â· Noerr Â· Clifford Chance</h4>
  <p>Antitrust law, compliance, contract drafting. International law firm foundations.</p>
  </div>
  </div>
@@ -1384,9 +1424,9 @@
 <!-- ========== IMPRESSUM (Overlay) ========== -->
 <div class="legal-overlay" id="impressum-overlay">
  <div class="legal-page">
- <button class="legal-close" onclick="closeLegal('impressum')" aria-label="Close">✕</button>
- <h1>Impressum</h1>
- <span class="legal-updated">As of: February 2026 · Information pursuant to § 5 DDG (German Digital Services Act)</span>
+ <button class="legal-close" onclick="closeLegal('impressum')" aria-label="Close">&#x2715;</button>
+ <h1>Legal Notice (Impressum)</h1>
+ <span class="legal-updated">As of: February 2026 &middot; Information pursuant to &sect; 5 DDG (German Digital Services Act)</span>
 
  <h2>Responsible for Content</h2>
  <p>
@@ -1398,124 +1438,166 @@
 
  <h2>Contact</h2>
  <p>
- E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="157e7a7b61747e6155617d70747c7974626c70673b7a6772">[email&#160;protected]</a><br>
+ E-Mail: <a href="/cdn-cgi/l/email-protection#9bfaf2f7faece2fee9b5feeedbfcf6faf2f7b5f8f4f6"><span class="__cf_email__" data-cfemail="37565e5b56404e524519524277505a565e5b1954585a">[email&#160;protected]</span></a><br>
  LinkedIn: <a href="https://de.linkedin.com/in/nicolai-dr-kruck-80550485" target="_blank" rel="noopener noreferrer">de.linkedin.com/in/nicolai-dr-kruck-80550485</a>
  </p>
 
- <h2>Professional Activity</h2>
- <p>Head of Group Privacy International, Divisional Support — Volkswagen AG</p>
- <p>This website is operated as a private, non-commercial publication serving professional opinion and knowledge transfer. It does not constitute legal advice and does not establish a client relationship.</p>
+ <h2>Professional Activity and Separation of Interests</h2>
+ <p>Head of Group Privacy International, Divisional Support &ndash; Volkswagen AG</p>
+ <p>This website is operated as a <strong>private, non-commercial publication</strong> serving personal professional opinion and knowledge transfer. It does not constitute legal advice, does not establish a client relationship, and reflects exclusively the personal views of the operator. This website has no connection to Volkswagen AG or its group companies. The content, positions and opinions published here are purely private in nature and cannot be attributed to Volkswagen AG or affiliated companies.</p>
 
  <h2>Editorially Responsible</h2>
- <p>Dr. Nicolai Kruck (address as above) pursuant to § 18 para. 2 MStV (German Interstate Media Treaty).</p>
+ <p>Dr. Nicolai Kruck (address as above) pursuant to &sect; 18 para. 2 MStV (German Interstate Media Treaty).</p>
 
  <h2>Liability for Content</h2>
- <p>The contents of this site were created with the greatest care. However, no guarantee is given for the accuracy, completeness or timeliness of the content. As a service provider, Dr. Nicolai Kruck is responsible for his own content on these pages in accordance with § 7 para. 1 DDG under general law. According to §§ 8 to 10 DDG, there is no obligation to monitor transmitted or stored third-party information or to investigate circumstances indicating unlawful activity.</p>
+ <p>The contents of this site were created with the greatest care. However, no guarantee is given for the accuracy, completeness or timeliness of the content. As a service provider, Dr. Nicolai Kruck is responsible for his own content on these pages in accordance with &sect; 7 para. 1 DDG under general law. According to &sect;&sect; 8 to 10 DDG, there is no obligation to monitor transmitted or stored third-party information or to investigate circumstances indicating unlawful activity. Obligations to remove or block the use of information under general law remain unaffected. Liability in this respect is only possible from the time of knowledge of a specific legal violation. Upon notification of such violations, the relevant content will be removed immediately.</p>
 
  <h2>Liability for Links</h2>
  <p>This site contains links to external third-party websites over whose content we have no influence. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not identifiable at the time of linking. Permanent content monitoring of linked pages is not reasonable without concrete indications of a legal violation. Upon notification of violations, such links will be removed immediately.</p>
 
  <h2>Copyright</h2>
- <p>The content and works created by the site operator on these pages are subject to German copyright law. Reproduction, editing, distribution and any kind of exploitation beyond the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use.</p>
+ <p>The content and works created by the site operator on these pages are subject to German copyright law. Reproduction, editing, distribution and any kind of exploitation beyond the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. Where content on this site was not created by the operator, third-party copyrights are observed. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please notify us accordingly. Upon notification of violations, such content will be removed immediately.</p>
 
  <h2>Notice on AI-Generated Content</h2>
- <p>Parts of the content on this website were created with the assistance of Artificial Intelligence. All AI-generated content has been editorially reviewed and is the responsibility of Dr. Nicolai Kruck. Sections specifically attributed (particularly the "Real Voice" section) are exclusively personally written.</p>
+ <p>Parts of the content on this website were created with the assistance of Artificial Intelligence (AI). All AI-generated content has been editorially reviewed and is the responsibility of Dr. Nicolai Kruck. Sections specifically attributed (particularly the &ldquo;Real Voice&rdquo; section) are exclusively personally written. The use of AI is subject to the editorial responsibility of the operator.</p>
+
+ <h2>Dispute Resolution</h2>
+ <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr</a>. As this website is operated purely privately and non-commercially and no contracts are concluded with consumers, participation in a dispute settlement procedure is not mandatory and is not offered.</p>
  </div>
 </div>
 
-<!-- ========== DATENSCHUTZERKLÄRUNG (Overlay) ========== -->
+<!-- ========== DATENSCHUTZERKL&Auml;RUNG (Overlay) ========== -->
 <div class="legal-overlay" id="datenschutz-overlay">
  <div class="legal-page">
- <button class="legal-close" onclick="closeLegal('datenschutz')" aria-label="Close">✕</button>
+ <button class="legal-close" onclick="closeLegal('datenschutz')" aria-label="Close">&#x2715;</button>
  <h1>Privacy Policy</h1>
- <span class="legal-updated">As of: February 2026 · pursuant to GDPR</span>
+ <span class="legal-updated">As of: February 2026 &middot; pursuant to GDPR (Art. 13, 14 GDPR)</span>
 
- <h2>1. Data Controller</h2>
+ <h2>Preliminary Remarks</h2>
+ <p>The protection of your personal data is a matter of particular importance to me. This Privacy Policy informs you pursuant to Art. 13 and 14 of the General Data Protection Regulation (GDPR) about which personal data is processed in connection with your visit and use of this website, for what purpose, and what rights you have. This website is designed around data minimization: <strong>no cookies</strong> are set, <strong>no tracking tools</strong> are used, and <strong>no profiling</strong> takes place.</p>
+
+ <h2>1. Data Controller (Art. 4 No. 7 GDPR)</h2>
  <p>
- Dr. Nicolai Kruck<br>
+ <strong>Dr. Nicolai Kruck</strong><br>
  Berthold-Lange-Str. 29<br>
  30559 Hannover<br>
  Germany<br>
- E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8de6e2e3f9ece6f9cdf9e5e8ece4e1ecfaf4e8ffa3e2ffea">[email&#160;protected]</a>
+ E-Mail: <a href="/cdn-cgi/l/email-protection#a8c9c1c4c9dfd1cdda86cddde8cfc5c9c1c486cbc7c5"><span class="__cf_email__" data-cfemail="0d6c64616c7a74687f2368784d6a606c6461236e6260">[email&#160;protected]</span></a>
  </p>
+ <p>A Data Protection Officer is not legally required for this private, non-commercial website and has not been appointed.</p>
 
- <h2>2. General Information on Data Processing</h2>
- <p>This website processes personal data only to the technically necessary extent. <strong>No cookies</strong> are set — neither technically necessary nor tracking or analytics cookies. <strong>No tracking tools</strong> (such as Google Analytics, Matomo, Facebook Pixel, etc.) are used. The website does <strong>not use a cookie banner</strong>, as no consent for cookies is required.</p>
+ <h2>2. Principles of Data Processing</h2>
+ <p>Personal data is only processed where legally permitted. The applicable legal bases are:</p>
+ <ul>
+ <li>Art. 6(1)(b) GDPR &ndash; performance of a contract or pre-contractual measures</li>
+ <li>Art. 6(1)(c) GDPR &ndash; compliance with a legal obligation</li>
+ <li>Art. 6(1)(f) GDPR &ndash; legitimate interests of the controller or a third party</li>
+ </ul>
+ <p>Consent (Art. 6(1)(a) GDPR) is not required for the operation of this website, as no consent-based services are used.</p>
 
  <h2>3. Hosting and Server Log Files</h2>
- <p>This website is hosted by <strong>Netlify, Inc.</strong> (44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA) </p>
+ <p>This website is hosted by <strong>Netlify, Inc.</strong> (44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA). A data processing agreement pursuant to Art. 28 GDPR has been concluded with Netlify.</p>
  <p>When accessing this website, Netlify automatically collects technical access data in server log files that your browser automatically transmits:</p>
  <ul>
- <li>IP address (possibly anonymized)</li>
+ <li>IP address of the accessing device (possibly anonymized)</li>
  <li>Date and time of access</li>
- <li>Requested page/file</li>
+ <li>Requested page or file (URL)</li>
  <li>Amount of data transferred</li>
+ <li>HTTP status code (server response)</li>
  <li>Browser type and version</li>
- <li>Operating system</li>
- <li>Referrer URL (previously visited page)</li>
+ <li>Operating system and device type</li>
+ <li>Referrer URL (last visited page, if transmitted)</li>
  </ul>
- <p>Processing is based on Art. 6(1)(f) GDPR on the basis of the legitimate interest in the technical provision and security of the website. Data is not merged with other data sources and is deleted after 30 days at the latest.</p>
- <p>Netlify may process data in the USA. Transfer is based on the EU-US Data Privacy Framework (DPF) or Standard Contractual Clauses (Art. 46(2)(c) GDPR). More information: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">netlify.com/privacy</a>.</p>
+ <p><strong>Purpose:</strong> Technical provision, stability and security of the website (e.g. defense against attacks, error analysis).<br>
+ <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest). The legitimate interest lies in the secure and functional provision of this website.<br>
+ <strong>Retention period:</strong> Log files are automatically deleted after 30 days at the latest, unless longer retention is required to defend against specific attacks. The data is not merged with other data sources or used for profiling.</p>
+ <p><strong>Third-country transfer:</strong> Netlify may process data in the USA. Transfer is based on the EU-US Data Privacy Framework (DPF) and additionally secured Standard Contractual Clauses pursuant to Art. 46(2)(c) GDPR. More information: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">netlify.com/privacy</a>.</p>
 
  <h2>4. Fonts (Locally Hosted)</h2>
- <p>This website uses the fonts Playfair Display, Source Sans 3 and IBM Plex Mono. All fonts are <strong>hosted locally on our own web server</strong>. When loading fonts, <strong>no connection to external servers</strong> (in particular not to Google) is established. No data is transmitted to third parties. The fonts are available under the SIL Open Font License and are free to use.</p>
+ <p>This website uses the fonts <em>Playfair Display</em>, <em>Source Sans 3</em> and <em>IBM Plex Mono</em>. All fonts are <strong>hosted exclusively on the web server</strong>. When loading fonts, <strong>no connection to external servers</strong> &ndash; in particular not to Google servers &ndash; is established. No data is transmitted to third parties. The fonts are licensed under the SIL Open Font License and are freely usable.</p>
 
  <h2>5. Contact Form</h2>
- <p>When you use the contact form on this page, the data you enter (name, email address, message) is processed for the purpose of handling your inquiry.</p>
+ <p>When you use the contact form on this page, the data you enter is processed for the purpose of handling your inquiry.</p>
+ <p><strong>Categories of data processed:</strong></p>
  <ul>
- <li><strong>Required field:</strong> Message</li>
- <li><strong>Optional fields:</strong> Name, email address</li>
- <li><strong>Purpose:</strong> Responding to your contact inquiry</li>
- <li><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (pre-contractual measures) or Art. 6(1)(f) GDPR (legitimate interest in communication)</li>
- <li><strong>Storage period:</strong> Until your inquiry is fully processed, then deletion unless statutory retention obligations exist</li>
+ <li><strong>Message</strong> (required) &ndash; content of your inquiry</li>
+ <li><strong>Name</strong> (optional) &ndash; for your identification</li>
+ <li><strong>Email address</strong> (optional) &ndash; for reply purposes</li>
  </ul>
- <p>The form uses a simple spam protection (honeypot method) that works <strong>without cookies and without tracking</strong>. No additional services (e.g., reCAPTCHA) are integrated.</p>
- <p>Form submission is handled by <strong>Formspree</strong> (Formspree, Inc., USA). Formspree processes submitted data exclusively for forwarding to the site operator. More information: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree Privacy Policy</a>.</p>
+ <p><strong>Purpose:</strong> Processing and responding to your contact inquiry.<br>
+ <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in communicating with users); where the inquiry is directed at entering into a contract: Art. 6(1)(b) GDPR.<br>
+ <strong>Retention period:</strong> Data is deleted after your inquiry has been fully processed, at the latest after 6 months, unless statutory retention obligations (e.g. tax or commercial law retention periods) apply.</p>
+ <p><strong>Technical service provider &ndash; Formspree:</strong> Form submissions are processed by <strong>Formspree</strong> (Formspree, Inc., 340 S Lemon Ave #9428, Walnut, CA 91789, USA). A data processing agreement pursuant to Art. 28 GDPR has been concluded with Formspree. Formspree processes submitted data exclusively for forwarding to the site operator and not for its own purposes. Transfer to the USA is based on Standard Contractual Clauses pursuant to Art. 46(2)(c) GDPR. More information: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree Privacy Policy</a>.</p>
+ <p><strong>Spam protection:</strong> The form uses the honeypot method, which works <strong>without cookies and without tracking</strong>. No third-party services such as Google reCAPTCHA are integrated.</p>
 
  <h2>6. Contact via Email</h2>
- <p>When you contact us by email, the data you provide (email address, name if applicable, message content) is stored for the purpose of processing your inquiry. Legal basis is Art. 6(1)(f) GDPR (legitimate interest). Data is deleted once it is no longer needed for its purpose.</p>
+ <p>When you contact us by email, the personal data you provide (in particular email address, name if applicable, message content) is stored and processed for the purpose of handling your inquiry.</p>
+ <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in communication); where applicable Art. 6(1)(b) GDPR (pre-contractual measure).<br>
+ <strong>Retention period:</strong> Data is deleted once no longer required for the purpose for which it was collected &ndash; generally after your inquiry has been fully processed, at the latest after 6 months. Where statutory retention obligations apply, deletion will be delayed accordingly.</p>
 
- <h2>7. External Links</h2>
- <p>This website contains links to external websites (including LinkedIn, studies, publications). When clicking these links, you will be redirected to the respective sites. The respective provider is responsible for data processing by operators of these external sites. In particular, when accessing <strong>LinkedIn</strong>, the privacy policies of LinkedIn Corporation apply.</p>
+ <h2>7. External Links to Third-Party Sites</h2>
+ <p>This website contains links to external third-party websites (including LinkedIn, academic studies, professional publications). When clicking such a link, you leave this website and are redirected to the respective third-party site. The respective provider is responsible for data processing by the operators of these external sites. No data is transferred to third-party sites as long as you do not click on a link. When accessing <strong>LinkedIn</strong>, the privacy policies of LinkedIn Ireland Unlimited Company apply. For further information, please refer to the privacy policy of the respective third-party provider.</p>
 
- <h2>8. No Additional Services</h2>
- <p>This website uses <strong>none</strong> of the following services or technologies:</p>
+ <h2>8. No Additional Data Processing &ndash; Overview</h2>
+ <p>This website expressly uses <strong>none</strong> of the following services or technologies:</p>
  <ul>
- <li>Analytics or tracking tools (Google Analytics, Matomo, etc.)</li>
- <li>Social media plugins or embedded content</li>
- <li>Advertising services or remarketing</li>
- <li>Content delivery networks (CDN)</li>
+ <li>Analytics or tracking tools (Google Analytics, Matomo, Hotjar, etc.)</li>
+ <li>Social media plugins or embedded third-party content (iFrames, share buttons)</li>
+ <li>Advertising services, retargeting or remarketing</li>
+ <li>Content delivery networks (CDN) with third-party tracking</li>
  <li>Third-party comment systems</li>
+ <li>Payment service providers</li>
+ <li>Newsletter services</li>
+ <li>Cookies of any kind (neither technically necessary nor optional)</li>
  </ul>
 
- <h2>9. Your Rights as a Data Subject</h2>
- <p>You have the following rights vis-à-vis the data controller regarding your personal data:</p>
+ <h2>9. Data Security</h2>
+ <p>This website uses SSL/TLS encryption (&ldquo;HTTPS&rdquo;) for security reasons and to protect the transmission of confidential content. An encrypted connection can be recognized by the address bar of your browser changing from &ldquo;http://&rdquo; to &ldquo;https://&rdquo; and by the padlock symbol in your browser bar. When SSL or TLS encryption is activated, data you transmit to us cannot be read by third parties. Additional technical security measures (security headers, Content Security Policy) are implemented.</p>
+
+ <h2>10. No Automated Decision-Making</h2>
+ <p>No automated decision-making including profiling within the meaning of Art. 22 GDPR takes place.</p>
+
+ <h2>11. Your Rights as a Data Subject</h2>
+ <p>You have the following rights vis-&agrave;-vis the data controller regarding your personal data:</p>
  <ul>
- <li><strong>Access</strong> (Art. 15 GDPR) — You can request information about your processed data.</li>
- <li><strong>Rectification</strong> (Art. 16 GDPR) — You can request correction of inaccurate data.</li>
- <li><strong>Erasure</strong> (Art. 17 GDPR) — You can request deletion of your data unless statutory retention obligations apply.</li>
- <li><strong>Restriction of processing</strong> (Art. 18 GDPR) — You can request restriction of processing.</li>
- <li><strong>Data portability</strong> (Art. 20 GDPR) — You can request your data in a structured, machine-readable format.</li>
- <li><strong>Objection</strong> (Art. 21 GDPR) — You can object to the processing of your data based on Art. 6(1)(f) GDPR at any time.</li>
+ <li><strong>Access</strong> (Art. 15 GDPR) &ndash; You can request information about whether and which personal data is processed, as well as information about the purpose, recipients, retention period and origin of the data.</li>
+ <li><strong>Rectification</strong> (Art. 16 GDPR) &ndash; You can request correction of inaccurate or completion of incomplete data.</li>
+ <li><strong>Erasure</strong> (Art. 17 GDPR) &ndash; You can request deletion of your data unless statutory retention obligations or other grounds pursuant to Art. 17(3) GDPR apply.</li>
+ <li><strong>Restriction of processing</strong> (Art. 18 GDPR) &ndash; You can request restriction of processing under the conditions of Art. 18 GDPR.</li>
+ <li><strong>Data portability</strong> (Art. 20 GDPR) &ndash; You can request the transfer of your data in a structured, commonly used and machine-readable format, where processing is based on consent or a contract.</li>
+ <li><strong>Objection</strong> (Art. 21 GDPR) &ndash; Where processing is based on Art. 6(1)(f) GDPR (legitimate interest), you may at any time object to processing on grounds relating to your particular situation. The controller will then no longer process the personal data unless it can demonstrate compelling legitimate grounds for processing which override your interests.</li>
  </ul>
- <p>To exercise your rights, please use the <strong>contact form</strong> on this page or contact the data controller by email.</p>
 
- <h2>10. Right to Lodge a Complaint</h2>
- <p>You have the right to lodge a complaint with a data protection supervisory authority about the processing of your personal data. The competent authority depends on your place of residence or the data controller's location:</p>
- <p>
- The State Commissioner for Data Protection of Lower Saxony<br>
- Prinzenstraße 5, 30159 Hannover<br>
- <a href="https://www.lfd.niedersachsen.de" target="_blank" rel="noopener noreferrer">www.lfd.niedersachsen.de</a>
+ <p style="background:#f0f4ff;border-left:3px solid #2c5282;padding:0.75rem 1rem;margin:1rem 0;font-size:0.85rem;border-radius:0 4px 4px 0;">
+ <strong>Special Notice on Your Right to Object (Art. 21 GDPR):</strong><br>
+ Where your personal data is processed on the basis of Art. 6(1)(f) GDPR (legitimate interests), you have the right to object to such processing at any time. Please direct your objection by email to: <a href="/cdn-cgi/l/email-protection#2a4b43464b5d534f58044f5f6a4d474b434604494547"><span class="__cf_email__" data-cfemail="09686065687e706c7b276c7c496e64686065276a6664">[email&#160;protected]</span></a>
  </p>
 
- <h2>11. Changes to This Privacy Policy</h2>
- <p>This privacy policy will be updated as needed to reflect changes in data processing practices or legal requirements. The current version date is indicated at the beginning of this policy.</p>
+ <p>To exercise your rights, please contact the data controller by email (<a href="/cdn-cgi/l/email-protection#38595154594f415d4a165d4d785f55595154165b5755"><span class="__cf_email__" data-cfemail="2e4f47424f59574b5c004b5b6e49434f4742004d4143">[email&#160;protected]</span></a>) or use the <strong>contact form</strong> on this page. Your request will be processed within the statutory deadline (generally one month, Art. 12(3) GDPR). In complex cases, this period may be extended by up to two further months.</p>
+
+ <h2>12. Right to Lodge a Complaint (Art. 77 GDPR)</h2>
+ <p>You have the right to lodge a complaint with a data protection supervisory authority about the processing of your personal data, in particular in the Member State of your habitual residence, your place of work or the place of the alleged infringement. The competent authority for the data controller is:</p>
+ <p>
+ <strong>The State Commissioner for Data Protection of Lower Saxony</strong><br>
+ Prinzenstrase 5<br>
+ 30159 Hannover, Germany<br>
+ Phone: +49 511 120-4500<br>
+ Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="75051a0601060110191910351913115b1b1c101110070614161d06101b5b1110">[email&#160;protected]</a><br>
+ <a href="https://www.lfd.niedersachsen.de" target="_blank" rel="noopener noreferrer">www.lfd.niedersachsen.de</a>
+ </p>
+ <p>The right to lodge a complaint is without prejudice to any other administrative or judicial remedy.</p>
+
+ <h2>13. Currency and Amendments to This Privacy Policy</h2>
+ <p>This Privacy Policy is dated February 2026 and is currently valid. Due to the further development of this website or due to changes in statutory provisions or regulatory requirements, it may become necessary to amend this Privacy Policy. The current version of this Privacy Policy can be accessed at any time on this website. The current version date is indicated at the beginning of this policy.</p>
  </div>
+</div>
+
+</div>
 </div>
 
 <footer>
  <div>
- <p>© 2026 TheAILawyer.org — Dr. Nicolai Kruck</p>
+ <p>Â© 2026 TheAILawyer.org — Dr. Nicolai Kruck</p>
  <div class="footer-legal">
  <a href="javascript:void(0)" onclick="openLegal('impressum')">Impressum</a>
  <a href="javascript:void(0)" onclick="openLegal('datenschutz')">Privacy Policy</a>
@@ -1524,7 +1606,7 @@
  <div class="ft">„KI wird Juristen nicht ersetzen — aber Juristen, die KI nutzen, werden diejenigen ersetzen, die es nicht tun."</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* animations removed */
 
 const nav = document.getElementById('navbar');
@@ -1598,36 +1680,4 @@ if(contactForm) {
  /* Honeypot check: if the hidden field was filled, it's a bot */
  const honeypot = this.querySelector('input[name="_gotcha"]');
  if(honeypot && honeypot.value !== '') {
- /* Silent rejection — bot thinks form was sent */
- document.getElementById('formSuccess').classList.add('show');
- this.style.display = 'none';
- return;
- }
- /* Validation: message is required */
- const message = this.querySelector('#cf-message');
- if(!message.value.trim()) {
- message.focus();
- message.style.borderColor = '#e53e3e';
- return;
- }
- /* Submit form via fetch (no redirect) */
- const formData = new FormData(this);
- fetch(this.action, {
- method: 'POST',
- body: formData,
- headers: { 'Accept': 'application/json' }
- }).then(response => {
- if(response.ok) {
- document.getElementById('formSuccess').classList.add('show');
- this.style.display = 'none';
- } else {
- alert('Error sending message. Please try again later.');
- }
- }).catch(() => {
- alert('Connection error. Please try again later.');
- });
- });
-}
-</script>
-</body>
-</html>
+ /* Silent rejection — bot thinks form was
