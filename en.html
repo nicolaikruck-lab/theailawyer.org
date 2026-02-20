@@ -1604,13 +1604,13 @@
 </footer>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+<script>
 /* animations removed */
 
 const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
 
-// Close dropdown on outside click
 document.addEventListener('click', function(e) {
  document.querySelectorAll('.nav-dropdown').forEach(d => {
  if (!d.contains(e.target)) d.classList.remove('open');
@@ -1633,8 +1633,6 @@ document.querySelectorAll('.article-header').forEach(h => {
  });
 });
 
-
-/* ---- THESIS CARD DEEP-DIVES ---- */
 document.querySelectorAll('.thesis-card-header').forEach(function(header) {
   header.addEventListener('click', function() {
     var card = this.parentElement;
@@ -1651,7 +1649,6 @@ function closeLegal(id) {
  document.getElementById(id + '-overlay').classList.remove('open');
  document.body.style.overflow = '';
 }
-/* Close on background click */
 document.querySelectorAll('.legal-overlay').forEach(overlay => {
  overlay.addEventListener('click', function(e) {
  if(e.target === this) {
@@ -1660,7 +1657,6 @@ document.querySelectorAll('.legal-overlay').forEach(overlay => {
  }
  });
 });
-/* Close on Escape */
 document.addEventListener('keydown', function(e) {
  if(e.key === 'Escape') {
  document.querySelectorAll('.legal-overlay.open').forEach(o => {
@@ -1675,5 +1671,35 @@ const contactForm = document.getElementById('contactForm');
 if(contactForm) {
  contactForm.addEventListener('submit', function(e) {
  e.preventDefault();
- /* Honeypot check */
- const honeypot = this.querySelector('input
+ const honeypot = this.querySelector('input[name="_gotcha"]');
+ if(honeypot && honeypot.value !== '') {
+ document.getElementById('formSuccess').classList.add('show');
+ this.style.display = 'none';
+ return;
+ }
+ const message = this.querySelector('#cf-message');
+ if(!message.value.trim()) {
+ message.focus();
+ message.style.borderColor = '#e53e3e';
+ return;
+ }
+ const formData = new FormData(this);
+ fetch(this.action, {
+ method: 'POST',
+ body: formData,
+ headers: { 'Accept': 'application/json' }
+ }).then(response => {
+ if(response.ok) {
+ document.getElementById('formSuccess').classList.add('show');
+ this.style.display = 'none';
+ } else {
+ alert('Error sending. Please try again later.');
+ }
+ }).catch(() => {
+ alert('Connection error. Please try again later.');
+ });
+ });
+}
+</script>
+</body>
+</html>
